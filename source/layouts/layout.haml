@@ -6,9 +6,11 @@
     %meta{:content => "IE=edge,chrome=1", "http-equiv" => "X-UA-Compatible"}
     / Use title if it's in the page YAML frontmatter
     %title= data.page.title || "Lounasaika.net"
-    = stylesheet_link_tag "normalize", "styles", "lounasaika_original"
+    /= stylesheet_link_tag "normalize", "styles", "lounasaika_original"
+    = stylesheet_link_tag "http://paav-o.github.com/lounasaika/stylesheets/normalize.css", "http://paav-o.github.com/lounasaika/stylesheets/styles.css", "http://paav-o.github.com/lounasaika/stylesheets/lounasaika_original.css"
     = javascript_include_tag "http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"
-    = javascript_include_tag "jquery.cookie", "jquery.tipTip.minified", "moment.min", "tempo.min"
+    /= javascript_include_tag "jquery.cookie", "jquery.tipTip.minified", "moment.min", "tempo.min"
+    = javascript_include_tag "http://paav-o.github.com/lounasaika/javascripts/jquery.cookie.js", "http://paav-o.github.com/lounasaika/javascripts/jquery.tipTip.minified.js", "http://paav-o.github.com/lounasaika/javascripts/moment.min.js", "http://paav-o.github.com/lounasaika/javascripts/tempo.min.js"
     :coffeescript
       $(document).ready ->
         $ ->
@@ -129,7 +131,7 @@
 
         renderDayLinks()
 
-        $.getJSON '/api/v1/#{I18n.locale}/menus.json', (data) -> 
+        $.getJSON 'http://paav-o.github.com/lounasaika/api/v1/#{I18n.locale}/menus.json', (data) -> 
           campi = campusList(data)
           if ($.cookie('campus') and ($.cookie('campus') in campi))
             window.campus = $.cookie('campus')
@@ -137,7 +139,7 @@
           renderCampusLinks(campi)
           reloadContent()
 
-        $.getJSON '/api/v1/announcements.json', (data) -> 
+        $.getJSON 'http://paav-o.github.com/lounasaika/api/v1/announcements.json', (data) -> 
           random = Math.floor(Math.random() * data.length)
           $('#announcement p').html(data[random]['text'])
           $('#announcement p a').attr('href', data[random]['href'])
