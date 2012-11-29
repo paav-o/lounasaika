@@ -154,7 +154,7 @@
       return lounasaika.render(data);
     };
     renderDayLinks();
-    $.getJSON('http://paav-o.github.com/lounasaika/api/v1/fi/menus.json', function(data) {
+    $.getJSON('http://leinonen.net/lounasaika/api/v1/fi/menus.json', function(data) {
       var campi, _ref;
       campi = campusList(data);
       if ($.cookie('campus') && (_ref = $.cookie('campus'), __indexOf.call(campi, _ref) >= 0)) {
@@ -164,7 +164,7 @@
       renderCampusLinks(campi);
       return reloadContent();
     });
-    return $.getJSON('http://paav-o.github.com/lounasaika/api/v1/announcements.json', function(data) {
+    return $.getJSON('http://leinonen.net/lounasaika/api/v1/announcements.json', function(data) {
       var random;
       random = Math.floor(Math.random() * data.length);
       $('#announcement p').html(data[random]['text']);
