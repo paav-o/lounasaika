@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content='text/html; charset=utf-8' http-equiv='Content-Type' />
+    <title>lounasaika.net API</title>
+    <style type='text/css'>
+      /*<![CDATA[*/
+        body {width: 700px; font-family: monospace; padding: 5px 20px 30px 20px;}
+        h1,h2 {font-size: 1.0em; margin-top: 40px;}
+        p {text-align: justify}
+        .prettyprint {overflow: scroll; height: 500px}
+      /*]]>*/
+    </style>
+    <link href="/stylesheets/normalize.css" media="screen" rel="stylesheet" type="text/css" />
+<link href="/stylesheets/prettify.css" media="screen" rel="stylesheet" type="text/css" />
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js" type="text/javascript"></script>
+    <script src="/javascripts/prettify.min.js" type="text/javascript"></script>
+  </head>
+  <body onload='prettyPrint()'>
+    <p style='text-align: right;'>
+      <strong>Lounasaika.net API V1 BETA</strong>
+      <br />
+      (updated 2012-11-29)
+      <p>
+        <h1>Audience</h1>
+        <p>This document is intended for website and mobile developers who want to use student restaurant menu data provided by Lounasaika.net API. It provides an introduction to using this API. Any feedback will be greatly appreciated.</p>
+        <p>
+          Please note that you are strongly encouraged to register your app by sending an email to api@lounasaika.net.
+        </p>
+        <h1>Availability</h1>
+        <p>
+          The service is hosted by
+          <a href='http://pages.github.com/'>Github Pages</a>
+          which ensures excellent availability.
+        </p>
+        <h1>Requests</h1>
+        <p>
+          Lounasaika.net API supports one request which provides all restaurant menus for current week:
+        </p>
+        <p>
+          <em>http://www.lounasaika.net/api/v1/menus.json</em>
+        </p>
+        <p>The JSON returned by this request is shown below. Note that actual JSON may contain less whitespace. You should not make assumptions about the amount or format of whitespace between requests.</p>
+        <p>The example contains two restaurants, Teekkariravintolat and TUAS-talo, which are both located on the same campus, Otaniemi. Opening times are fixed form and nicely parsable. URL's for available languages are listed under 'url' element. Under 'meals' element you can find menus in all available languages (currently Finnish and English).</p>
+        <pre class='prettyprint'>[&#x000A;  {&#x000A;    "name": "Teekkariravintolat",&#x000A;    "address": "Otakaari 24, Espoo",&#x000A;    "campus": "Otaniemi",&#x000A;    "open": "Mon-Thu 10:30-16:00, Fri 10:30-15:00, Sat 11:30-15:00",&#x000A;    "url": {&#x000A;      "fi": "http://www.sodexo.fi/dipoli"&#x000A;    },&#x000A;    "meals": {&#x000A;      "fi": [&#x000A;        [&#x000A;          "Maanantain broileripuikot",&#x000A;          "Maanantain mozzarellasalaatti"&#x000A;        ],&#x000A;        [&#x000A;          "Tiistain leike",&#x000A;          "Tiistain keitto"&#x000A;        ],&#x000A;        [&#x000A;          "Keskiviikon spaghetti"&#x000A;        ],&#x000A;        [&#x000A;          "Torstailohi"&#x000A;        ],&#x000A;        [&#x000A;          "Perjantain curry"&#x000A;        ],&#x000A;        [&#x000A;          "Lauantainakit"&#x000A;        ]&#x000A;      ],&#x000A;      "en": [&#x000A;        [&#x000A;          "Monday chicken sticks",&#x000A;          "Monday mozzarella salad"&#x000A;        ],&#x000A;        [&#x000A;          "Tuesday schnitzel",&#x000A;          "Tuesday soup"&#x000A;        ],&#x000A;        [&#x000A;          "Spaghetti à la Wednesday"&#x000A;        ],&#x000A;        [&#x000A;          "Thursday salmon"&#x000A;        ],&#x000A;        [&#x000A;          "Curry of Friday"&#x000A;        ],&#x000A;        [&#x000A;          "Saturday sausages"&#x000A;        ]&#x000A;      ]&#x000A;    }&#x000A;  },&#x000A;  {&#x000A;    "name": "TUAS-talo",&#x000A;    "address": "Otaniementie 17, Espoo",&#x000A;    "campus": "Otaniemi",&#x000A;    "open": "Mon-Thu 10:30-16:00, Fri 10:30-14:00",&#x000A;    "url": {&#x000A;      "fi": "http://www.amica.fi/TUAS",&#x000A;      "en": "http://www.amica.fi/en/TUAS"&#x000A;    },&#x000A;    "meals": {&#x000A;      "fi": [],&#x000A;      "en": []&#x000A;    }&#x000A;  }&#x000A;]&#x000A;</pre>
+        <p>
+          Note that these results generally need to be parsed if you wish to extract values from the results. Parsing JSON is relatively easy. See
+          <a href='http://code.google.com/apis/maps/documentation/webservices/index.html#ParsingJSON'>Parsing JSON</a>
+          for some recommended design patterns.
+        </p>
+      </p>
+    </p>
+  </body>
+</html>

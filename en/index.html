@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset='utf-8' />
+    <!-- Always force latest IE rendering engine or request Chrome Frame -->
+    <meta content='IE=edge,chrome=1' http-equiv='X-UA-Compatible' />
+    <!-- Use title if it's in the page YAML frontmatter -->
+    <title>Lounasaika.net</title>
+    <link href="/stylesheets/normalize.css" media="screen" rel="stylesheet" type="text/css" />
+    <link href="/stylesheets/styles.css" media="screen" rel="stylesheet" type="text/css" />
+    <link href="/stylesheets/lounasaika_original.css" media="screen" rel="stylesheet" type="text/css" />
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js" type="text/javascript"></script>
+    <script src="/javascripts/jquery.cookie.js" type="text/javascript"></script>
+    <script src="/javascripts/jquery.tipTip.minified.js" type="text/javascript"></script>
+    <script src="/javascripts/moment.min.js" type="text/javascript"></script>
+    <script src="/javascripts/tempo.min.js" type="text/javascript"></script>
+    <script type='text/javascript'>
+  //<![CDATA[
+    (function() {
+  var __indexOf = [].indexOf || function(item) { for (var i = 0, l = this.length; i < l; i++) { if (i in this && this[i] === item) return i; } return -1; };
+
+  $(document).ready(function() {
+    var campusList, lounasaika, parseRestaurantStatus, reloadContent, renderCampusLinks, renderDayLinks, time, weekdaysShort;
+    $(function() {
+      var tipTip;
+      tipTip = function(selector, options) {
+        var elements;
+        elements = jQuery(selector);
+        $('.tooltip').tipTip(options);
+        $('body').ajaxComplete(function() {
+          elements = jQuery(selector);
+          return elements.tipTip(options);
+        });
+        return elements;
+      };
+      return tipTip('a[rel]', {
+        maxWidth: 'auto',
+        edgeOffset: 10,
+        attribute: 'rel'
+      });
+    });
+    String.prototype.capitalize = function() {
+      return this.substr(0, 1).toUpperCase() + this.substr(1);
+    };
+    $('#weekdays a').live('click', function(event) {
+      window.day = $(this).attr('id');
+      reloadContent();
+      $('#weekdays a').removeClass('active');
+      return $(this).addClass('active');
+    });
+    $('#campi a').live('click', function(event) {
+      window.campus = $(this).attr('id');
+      reloadContent();
+      $('#campi a').removeClass('active');
+      $(this).addClass('active');
+      return $.cookie('campus', window.campus, {
+        expires: 365,
+        path: '/'
+      });
+    });
+    weekdays['fi'] = ['Sunnuntain', 'Maanantain', 'Tiistain', 'Keskiviikon', 'Torstain', 'Perjantain', 'Lauantain'];
+    weekdays['en'] = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
+    weekdaysShort = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'];
+    window.day = new Date().getDay();
+    time = moment().format('HHmm');
+    $("#weekdays a").each(function(i, dayName) {
+      return $(this).attr("id", window.day + i);
+    });
+    lounasaika = Tempo.prepare('restaurants');
+    parseRestaurantStatus = function(openingTimes) {
+      var status;
+      status = 'Closed';
+      $(openingTimes.split(', ')).each(function(i, range) {
+        var firstDay, lastDay, timeRange, weekdayRange;
+        weekdayRange = range.split(' ')[0].split('-');
+        firstDay = weekdaysShort.indexOf(weekdayRange[0]);
+        lastDay = weekdayRange[1] ? weekdaysShort.indexOf(weekdayRange[1]) : firstDay;
+        if (window.day >= firstDay && window.day <= lastDay) {
+          timeRange = range.split(' ')[1].split('-');
+          if (time >= timeRange[0].replace(/:/g, '') && time <= timeRange[1].replace(/:/g, '')) {
+            return status = 'Open until ' + timeRange[1] + ' ';
+          }
+        }
+      });
+      return status;
+    };
+    campusList = function(data) {
+      var campi;
+      campi = $.map(data, function(c) {
+        return c['campus'];
+      });
+      return $.unique(campi).reverse();
+    };
+    renderCampusLinks = function(campi) {
+      $('<a>', {
+        text: 'all restaurants',
+        id: '',
+        "class": (window.campus === void 0 ? 'active' : void 0),
+        title: 'Näytä kaikkien kampusten ravintolat',
+        href: '/',
+        onclick: 'return false'
+      }).appendTo('#campi');
+      return $(campi).each(function(i, campus) {
+        return $('<a>', {
+          text: campus,
+          id: campus,
+          "class": (window.campus !== void 0 && campus === window.campus.capitalize() ? 'active' : void 0),
+          title: 'Näytä vain valitun kampuksen ravintolat',
+          href: '/',
+          onclick: 'return false'
+        }).appendTo('#campi');
+      });
+    };
+    renderDayLinks = function() {
+      return $.each(['today', 'tomorrow', 'day after'], function(i, dayName) {
+        return $('<a>', {
+          text: dayName,
+          id: window.day + i,
+          "class": (i === 0 ? 'active' : void 0),
+          title: 'Näytä valitun päivän ruokalistat',
+          href: '/',
+          onclick: 'return false'
+        }).appendTo('#weekdays');
+      });
+    };
+    reloadContent = function() {
+      var data, newPath, rootPath;
+      $('#day').html(weekdays['en'][window.day]);
+      data = $('body').data('menuData');
+      if (window.location.pathname.substring(0, 4) === '/en/') {
+        rootPath = '/en/';
+      } else {
+        rootPath = '/';
+      }
+      if (window.campus !== void 0) {
+        newPath = rootPath + window.campus.toLowerCase();
+      }
+      window.history.pushState(null, null, newPath || rootPath);
+      if (window.campus) {
+        data = $.grep(data, function(n, i) {
+          return n.campus === window.campus.capitalize();
+        });
+      }
+      $(data).each(function(i, restaurant) {
+        restaurant.status = parseRestaurantStatus(restaurant.open);
+        restaurant.url_by_lang = restaurant.url['en'] || restaurant.url['fi'];
+        if (restaurant.meals) {
+          return restaurant.mealsToday = restaurant.meals['en'][window.day - 1];
+        }
+      });
+      lounasaika.clear();
+      return lounasaika.render(data);
+    };
+    renderDayLinks();
+    $.getJSON('/api/v1/en/menus.json', function(data) {
+      var campi, _ref;
+      campi = campusList(data);
+      if ($.cookie('campus') && (_ref = $.cookie('campus'), __indexOf.call(campi, _ref) >= 0)) {
+        window.campus = $.cookie('campus');
+      }
+      $('body').data('menuData', data);
+      renderCampusLinks(campi);
+      return reloadContent();
+    });
+    return $.getJSON('/api/v1/announcements.json', function(data) {
+      var random;
+      random = Math.floor(Math.random() * data.length);
+      $('#announcement p').html(data[random]['text']);
+      return $('#announcement p a').attr('href', data[random]['href']);
+    });
+  });
+
+}).call(this);
+
+  //]]>
+</script>
+  </head>
+  <body class='en en_index'>
+    <div id='announcement'>
+      <p></p>
+      <div id='mark_as_read'>
+        <!-- %a#mark_as_read_x{:href => "#", :onclick => "return false;", :title => "Piilota tiedote"} piilota -->
+      </div>
+    </div>
+    <div id='header'>
+      <div class='sprites' id='logo_png'></div>
+      <div id='subheader_wrapper'>
+        <h1>
+          <a href='http://www.lounasaika.net/'>
+            lounasaika.net
+          </a>
+        </h1>
+        <span id='slogan'>
+          <span id='day'></span>
+          campus menus
+        </span>
+      </div>
+      <div class='header_inside'>
+        <a title="We are hungry for your feedback, give some!" href="javascript:UserVoice.showPopupWidget();">Feedback</a>
+        |
+        <!-- = link_to I18n.t(:mobile), "api", :title => I18n.t(:mobile_title) -->
+        <!-- | -->
+        <a title="Become fan on Facebook!" href="http://www.facebook.com/lounasaika">Facebook</a>
+        |
+        <a title="I'm open source, fork me on Github!" href="http://github.com/paav-o/lounasaika">Github</a>
+        |
+        <a title="API available, want to develop some mashup goodness?" href="/api.html">API</a>
+        |
+        <a title="Suomeksi" href="/">Suomeksi</a>
+      </div>
+    </div>
+    <div class='nav' id='weekdays'></div>
+    <div class='nav' id='campi'></div>
+    <ul id='restaurants'>
+      <li data-template='data-template' style='display: none'>
+        <h2>
+          <a href='{{url_by_lang}}'>
+            {{name}}
+          </a>
+        </h2>
+        <div class='open'>
+          {{status}}
+          <a class='tooltip' href='#' onclick='return false;' rel="&lt;dl&gt;&lt;dt&gt;{{name}} ({{campus}})&lt;/dt&gt;&lt;dd&gt;{{address}}&lt;/dd&gt;&lt;br/&gt;&lt;dt&gt;Maanantaista torstaihin:&lt;/dt&gt;&lt;dd&gt;00:00 - 00:00&lt;/dd&gt;&lt;dt&gt;Perjantaisin:&lt;/dt&gt;&lt;dd&gt;00:00 - 00:00&lt;/dd&gt;&lt;dt&gt;Lauantaisin:&lt;/dt&gt;&lt;dd&gt;suljettu&lt;/dd&gt;&lt;/dl&gt;&lt;img src='http://maps.google.com/maps/api/staticmap?center={{address}}&amp;zoom=14&amp;size=250x200&amp;maptype=roadmap&amp;markers=color:green|{{address}}&amp;sensor=false'&gt;">[info]</a>
+        </div>
+        <ul class='meals'>
+          <li data-template='mealsToday'>
+            {{.}}
+          </li>
+        </ul>
+      </li>
+    </ul>
+    <script type='text/javascript'>
+      //<![CDATA[
+        (function() {
+      var uvOptions;
+    
+      uvOptions = {};
+    
+      (function() {
+        var s, uv;
+        uv = document.createElement("script");
+        uv.type = "text/javascript";
+        uv.async = true;
+        uv.src = ("https:" === document.location.protocol ? "https://" : "http://") + "widget.uservoice.com/FEMzHDX0yGHbPzCU1rZpAA.js";
+        s = document.getElementsByTagName("script")[0];
+        return s.parentNode.insertBefore(uv, s);
+      })();
+    
+    }).call(this);
+    
+      //]]>
+    </script>
+  </body>
+</html>
