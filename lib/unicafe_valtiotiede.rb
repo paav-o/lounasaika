@@ -1,3 +1,0 @@
-class UnicafeValtiotiede < Unicafe
-
-end

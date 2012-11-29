@@ -1,3 +1,0 @@
-class UnicafeKookos < Unicafe
-
-end

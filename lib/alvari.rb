@@ -1,3 +1,0 @@
-class Alvari < Amica
-
-end

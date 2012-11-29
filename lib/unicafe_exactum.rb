@@ -1,3 +1,0 @@
-class UnicafeExactum < Unicafe
-
-end

@@ -1,3 +1,0 @@
-class UnicafePorthania < Unicafe
-
-end

@@ -1,3 +1,0 @@
-class UnicafeChemicum < Unicafe
-
-end

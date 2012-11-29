@@ -1,3 +1,0 @@
-class Teekkariravintolat < Sodexo
-
-end

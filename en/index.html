@@ -6,14 +6,16 @@
     <meta content='IE=edge,chrome=1' http-equiv='X-UA-Compatible' />
     <!-- Use title if it's in the page YAML frontmatter -->
     <title>Lounasaika.net</title>
-    <link href="/stylesheets/normalize.css" media="screen" rel="stylesheet" type="text/css" />
-    <link href="/stylesheets/styles.css" media="screen" rel="stylesheet" type="text/css" />
-    <link href="/stylesheets/lounasaika_original.css" media="screen" rel="stylesheet" type="text/css" />
+    <!-- = stylesheet_link_tag "normalize", "styles", "lounasaika_original" -->
+    <link href="http://paav-o.github.com/lounasaika/stylesheets/normalize.css" media="screen" rel="stylesheet" type="text/css" />
+    <link href="http://paav-o.github.com/lounasaika/stylesheets/styles.css" media="screen" rel="stylesheet" type="text/css" />
+    <link href="http://paav-o.github.com/lounasaika/stylesheets/lounasaika_original.css" media="screen" rel="stylesheet" type="text/css" />
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js" type="text/javascript"></script>
-    <script src="/javascripts/jquery.cookie.js" type="text/javascript"></script>
-    <script src="/javascripts/jquery.tipTip.minified.js" type="text/javascript"></script>
-    <script src="/javascripts/moment.min.js" type="text/javascript"></script>
-    <script src="/javascripts/tempo.min.js" type="text/javascript"></script>
+    <!-- = javascript_include_tag "jquery.cookie", "jquery.tipTip.minified", "moment.min", "tempo.min" -->
+    <script src="http://paav-o.github.com/lounasaika/javascripts/jquery.cookie.js" type="text/javascript"></script>
+    <script src="http://paav-o.github.com/lounasaika/javascripts/jquery.tipTip.minified.js" type="text/javascript"></script>
+    <script src="http://paav-o.github.com/lounasaika/javascripts/moment.min.js" type="text/javascript"></script>
+    <script src="http://paav-o.github.com/lounasaika/javascripts/tempo.min.js" type="text/javascript"></script>
     <script type='text/javascript'>
   //<![CDATA[
     (function() {
@@ -152,7 +154,7 @@
       return lounasaika.render(data);
     };
     renderDayLinks();
-    $.getJSON('/api/v1/en/menus.json', function(data) {
+    $.getJSON('http://paav-o.github.com/lounasaika/api/v1/en/menus.json', function(data) {
       var campi, _ref;
       campi = campusList(data);
       if ($.cookie('campus') && (_ref = $.cookie('campus'), __indexOf.call(campi, _ref) >= 0)) {
@@ -162,7 +164,7 @@
       renderCampusLinks(campi);
       return reloadContent();
     });
-    return $.getJSON('/api/v1/announcements.json', function(data) {
+    return $.getJSON('http://paav-o.github.com/lounasaika/api/v1/announcements.json', function(data) {
       var random;
       random = Math.floor(Math.random() * data.length);
       $('#announcement p').html(data[random]['text']);

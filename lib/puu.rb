@@ -1,3 +1,0 @@
-class Puu < Amica
-
-end

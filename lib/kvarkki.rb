@@ -1,3 +1,0 @@
-class Kvarkki < Amica
-
-end
