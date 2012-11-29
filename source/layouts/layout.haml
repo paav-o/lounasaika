@@ -131,7 +131,7 @@
 
         renderDayLinks()
 
-        $.getJSON 'http://paav-o.github.com/lounasaika/api/v1/#{I18n.locale}/menus.json', (data) -> 
+        $.getJSON 'http://leinonen.net/lounasaika/api/v1/#{I18n.locale}/menus.json', (data) -> 
           campi = campusList(data)
           if ($.cookie('campus') and ($.cookie('campus') in campi))
             window.campus = $.cookie('campus')
@@ -139,7 +139,7 @@
           renderCampusLinks(campi)
           reloadContent()
 
-        $.getJSON 'http://paav-o.github.com/lounasaika/api/v1/announcements.json', (data) -> 
+        $.getJSON 'http://leinonen.net/lounasaika/api/v1/announcements.json', (data) -> 
           random = Math.floor(Math.random() * data.length)
           $('#announcement p').html(data[random]['text'])
           $('#announcement p a').attr('href', data[random]['href'])
