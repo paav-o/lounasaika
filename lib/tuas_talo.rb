@@ -1,0 +1,3 @@
+class TuasTalo < Amica
+
+end

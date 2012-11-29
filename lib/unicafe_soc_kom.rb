@@ -1,0 +1,3 @@
+class UnicafeSocKom < Unicafe
+
+end

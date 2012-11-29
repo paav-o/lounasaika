@@ -1,0 +1,3 @@
+class UnicafeKorona < Unicafe
+
+end

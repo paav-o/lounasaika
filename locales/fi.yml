@@ -1,0 +1,24 @@
+---
+fi:
+  feedback: Palaute
+  feedback_title: Jäikö nälkä? Anna palautetta!
+  facebook_title: Liity faniksi Facebookissa!
+  github_title: Palvelu on avointa lähdekoodia. Osallistu kehittämiseen Githubissa!
+  api_title: Kiinnostaako mashup-palveluiden kehitys? Tutustu avoimeen rajapintaan!
+  mobile: Mobiili
+  mobile_title: Kokeile sivun mobiiliversiota
+
+  campus_menus: poikkitieteelliset ruokalistat
+
+  other_language_path: /en/
+  other_language_long: In English
+
+  today: tänään
+  tomorrow: huomenna
+  day_after: ylihuomenna
+
+  all_restaurants: kaikki ravintolat
+
+  closed: Kiinni
+  open: Avoinna klo
+  until: saakka

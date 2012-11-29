@@ -1,0 +1,3 @@
+class UnicafeRotunda < Unicafe
+
+end

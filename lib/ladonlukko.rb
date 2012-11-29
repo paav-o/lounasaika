@@ -1,0 +1,3 @@
+class Ladonlukko < Sodexo
+
+end

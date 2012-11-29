@@ -1,0 +1,3 @@
+class UnicafePaarakennus < Unicafe
+
+end

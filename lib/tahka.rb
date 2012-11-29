@@ -1,0 +1,3 @@
+class Tahka < Amica
+
+end

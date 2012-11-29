@@ -1,0 +1,3 @@
+class Silinteri < Amica
+
+end

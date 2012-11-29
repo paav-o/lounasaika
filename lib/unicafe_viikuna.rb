@@ -1,0 +1,3 @@
+class UnicafeViikuna < Unicafe
+
+end

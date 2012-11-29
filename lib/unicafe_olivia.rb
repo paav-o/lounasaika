@@ -1,0 +1,3 @@
+class UnicafeOlivia < Unicafe
+
+end

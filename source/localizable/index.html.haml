@@ -1,0 +1,50 @@
+#announcement
+  %p
+  #mark_as_read
+    /%a#mark_as_read_x{:href => "#", :onclick => "return false;", :title => "Piilota tiedote"} piilota
+#header
+  #logo_png.sprites
+  #subheader_wrapper
+    %h1
+      %a{:href => "http://www.lounasaika.net/"}
+        lounasaika.net
+    %span#slogan
+      %span#day
+      = I18n.t(:campus_menus)
+  .header_inside
+    = link_to I18n.t(:feedback), "javascript:UserVoice.showPopupWidget();", :title => I18n.t(:feedback_title)
+    |
+    /= link_to I18n.t(:mobile), "api", :title => I18n.t(:mobile_title)
+    /|
+    = link_to "Facebook", "http://www.facebook.com/lounasaika", :title => I18n.t(:facebook_title)
+    |
+    = link_to "Github", "http://github.com/paav-o/lounasaika", :title => I18n.t(:github_title)
+    |
+    = link_to "API", "/api.html", :title => I18n.t(:api_title)
+    |
+    = link_to I18n.t(:other_language_long), I18n.t(:other_language_path), :title => I18n.t(:other_language_long)
+#weekdays.nav
+#campi.nav
+
+%ul#restaurants
+  %li{"data-template" => "data-template", :style => "display: none"}
+    %h2
+      %a{:href => "{{url_by_lang}}"}
+        {{name}}
+    .open
+      {{status}}
+      %a.tooltip{:href => "#", :onclick => "return false;", :rel => "<dl><dt>{{name}} ({{campus}})</dt><dd>{{address}}</dd><br/><dt>Maanantaista torstaihin:</dt><dd>00:00 - 00:00</dd><dt>Perjantaisin:</dt><dd>00:00 - 00:00</dd><dt>Lauantaisin:</dt><dd>suljettu</dd></dl><img src='http://maps.google.com/maps/api/staticmap?center={{address}}&zoom=14&size=250x200&maptype=roadmap&markers=color:green|{{address}}&sensor=false'>"} [info]
+    %ul.meals
+      %li{"data-template" => "mealsToday"}
+        {{.}}
+
+:coffeescript
+  uvOptions = {}
+  (->
+    uv = document.createElement("script")
+    uv.type = "text/javascript"
+    uv.async = true
+    uv.src = ((if "https:" is document.location.protocol then "https://" else "http://")) + "widget.uservoice.com/FEMzHDX0yGHbPzCU1rZpAA.js"
+    s = document.getElementsByTagName("script")[0]
+    s.parentNode.insertBefore uv, s
+  )()

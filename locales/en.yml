@@ -1,0 +1,24 @@
+---
+en:
+  feedback: Feedback
+  feedback_title: We are hungry for your feedback, give some!
+  facebook_title: Become fan on Facebook!
+  github_title: I'm open source, fork me on Github!
+  api_title: API available, want to develop some mashup goodness?
+  mobile: Mobile
+  mobile_title: Try the mobile version
+
+  campus_menus: campus menus
+
+  other_language_path: /
+  other_language_long: Suomeksi
+
+  today: today
+  tomorrow: tomorrow
+  day_after: day after
+
+  all_restaurants: all restaurants
+
+  closed: Closed
+  open: Open until
+  until: ''

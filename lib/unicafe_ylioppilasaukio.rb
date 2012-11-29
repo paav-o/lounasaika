@@ -1,0 +1,3 @@
+class UnicafeYlioppilasaukio < Unicafe
+
+end

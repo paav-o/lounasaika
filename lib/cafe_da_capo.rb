@@ -1,0 +1,3 @@
+class CafeDaCapo < Amica
+
+end

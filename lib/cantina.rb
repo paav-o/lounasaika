@@ -1,0 +1,3 @@
+class Cantina < Sodexo
+
+end

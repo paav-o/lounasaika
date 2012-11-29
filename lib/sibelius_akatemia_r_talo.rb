@@ -1,0 +1,3 @@
+class SibeliusAkatemiaRTalo < Amica
+
+end

@@ -1,0 +1,3 @@
+class Chydenia < Amica
+
+end

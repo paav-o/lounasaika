@@ -1,0 +1,3 @@
+class UnicafeMetsatalo < Unicafe
+
+end

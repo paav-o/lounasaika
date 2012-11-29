@@ -1,0 +1,145 @@
+!!! 5
+%html
+  %head
+    %meta{:charset => "utf-8"}
+    / Always force latest IE rendering engine or request Chrome Frame
+    %meta{:content => "IE=edge,chrome=1", "http-equiv" => "X-UA-Compatible"}
+    / Use title if it's in the page YAML frontmatter
+    %title= data.page.title || "Lounasaika.net"
+    = stylesheet_link_tag "normalize", "styles", "lounasaika_original"
+    = javascript_include_tag "http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"
+    = javascript_include_tag "jquery.cookie", "jquery.tipTip.minified", "moment.min", "tempo.min"
+    :coffeescript
+      $(document).ready ->
+        $ ->
+          # Wrap the tipTips generation inside a function
+          # This function works in ajax loaded content
+          tipTip = (selector, options) ->
+            elements = jQuery(selector)
+            $('.tooltip').tipTip options # apply tipTips as usual
+            $('body').ajaxComplete ->
+              elements = jQuery(selector) # reselect elements --
+              elements.tipTip options # -- and apply again after ajax requests
+            elements
+          # This function gets used instead of the original one
+          tipTip 'a[rel]',
+            maxWidth: 'auto'
+            edgeOffset: 10
+            attribute: 'rel'
+
+        String::capitalize = ->
+          return this.substr(0, 1).toUpperCase() + this.substr(1)
+
+        # change day
+        $('#weekdays a').live 'click', (event) ->
+          window.day = $(this).attr('id')
+          reloadContent()
+          $('#weekdays a').removeClass 'active'
+          $(this).addClass 'active'
+
+        # change campus
+        $('#campi a').live 'click', (event) ->
+          window.campus = $(this).attr('id')
+          reloadContent()
+          $('#campi a').removeClass 'active'
+          $(this).addClass 'active'
+          $.cookie 'campus', window.campus,
+            expires: 365
+            path: '/'
+
+        weekdays['fi'] = ['Sunnuntain', 'Maanantain', 'Tiistain', 'Keskiviikon', 'Torstain', 'Perjantain', 'Lauantain']
+        weekdays['en'] = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday']
+        weekdaysShort = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat']
+        window.day = new Date().getDay()
+        time = moment().format('HHmm')
+
+        $("#weekdays a").each (i, dayName) ->
+          $(this).attr("id", window.day+i)
+
+        lounasaika = Tempo.prepare('restaurants')
+
+        parseRestaurantStatus = (openingTimes) ->
+          status = '#{I18n.t(:closed)}'
+          $(openingTimes.split(', ')).each (i, range) ->
+            weekdayRange = range.split(' ')[0].split('-')
+            firstDay = weekdaysShort.indexOf weekdayRange[0]
+            lastDay = if weekdayRange[1] then weekdaysShort.indexOf weekdayRange[1] else firstDay
+            if (window.day >= firstDay and window.day <= lastDay)
+              timeRange = range.split(' ')[1].split('-')
+              if (time >= timeRange[0].replace(/:/g,'') and time <= timeRange[1].replace(/:/g,''))
+                status = '#{I18n.t(:open)} '+timeRange[1]+' #{I18n.t(:until)}'
+          status
+
+        campusList = (data) ->
+          campi = $.map(data, (c) ->
+            c['campus']
+          )
+          $.unique(campi).reverse()
+
+        renderCampusLinks = (campi) ->
+          $('<a>',
+            text: '#{I18n.t(:all_restaurants)}'
+            id: ''
+            class: ('active' if window.campus == undefined)
+            title: 'Näytä kaikkien kampusten ravintolat'
+            href: '/'
+            onclick: 'return false'
+          ).appendTo '#campi'
+          $(campi).each (i, campus) ->
+            $('<a>',
+              text: campus
+              id: campus
+              class: ('active' if (window.campus != undefined and campus == window.campus.capitalize()))
+              title: 'Näytä vain valitun kampuksen ravintolat'
+              href: '/'
+              onclick: 'return false'
+            ).appendTo '#campi'
+
+        renderDayLinks = () ->
+          $.each ['#{I18n.t(:today)}', '#{I18n.t(:tomorrow)}', '#{I18n.t(:day_after)}'], (i, dayName) ->
+            $('<a>',
+              text: dayName
+              id: window.day+i
+              class: ('active' if i==0)
+              title: 'Näytä valitun päivän ruokalistat'
+              href: '/'
+              onclick: 'return false'
+            ).appendTo '#weekdays'
+
+        reloadContent = () ->
+          $('#day').html(weekdays['#{I18n.locale}'][window.day])
+          data = $('body').data('menuData')
+          if window.location.pathname.substring(0, 4) == '/en/'
+            rootPath = '/en/'
+          else
+            rootPath = '/'
+          if window.campus != undefined
+            newPath = rootPath+window.campus.toLowerCase()
+          window.history.pushState(null, null, newPath || rootPath)
+          if window.campus
+            data = $.grep data, (n, i) ->
+              n.campus == window.campus.capitalize()
+          $(data).each (i, restaurant) ->
+            restaurant.status = parseRestaurantStatus(restaurant.open)
+            restaurant.url_by_lang = (restaurant.url['#{I18n.locale}'] || restaurant.url['fi'])
+            if (restaurant.meals)
+              restaurant.mealsToday = restaurant.meals['#{I18n.locale}'][window.day-1]
+          lounasaika.clear()
+          lounasaika.render data
+
+        renderDayLinks()
+
+        $.getJSON '/api/v1/#{I18n.locale}/menus.json', (data) -> 
+          campi = campusList(data)
+          if ($.cookie('campus') and ($.cookie('campus') in campi))
+            window.campus = $.cookie('campus')
+          $('body').data('menuData', data)
+          renderCampusLinks(campi)
+          reloadContent()
+
+        $.getJSON '/api/v1/announcements.json', (data) -> 
+          random = Math.floor(Math.random() * data.length)
+          $('#announcement p').html(data[random]['text'])
+          $('#announcement p a').attr('href', data[random]['href'])
+  %body{:class => page_classes}
+    = yield
