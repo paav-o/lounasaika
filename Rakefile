@@ -17,7 +17,7 @@ require "yaml"
 require "bing_translator"
 require "nokogiri"
 require "pdf/reader"
-require "middleman-gh-pages"
+#require "middleman-gh-pages"
 
 # scraper libraries
 Dir.glob("lib/*.rb").each { |file| import file }
@@ -58,7 +58,7 @@ task :update do
           meals = {"fi" => [], "en" => []}
           restaurant["meals"] = scraper.get_meals(data, meals)
 
-          restaurant = add_translations(restaurant, scraper)
+          restaurant = add_translations(restaurant)
         #rescue
         #  puts colorize("Couldn't process meals for #{restaurant["name"]}!", 31)
         #end
@@ -95,6 +95,7 @@ task :new_restaurant do
   restaurant["url"] = STDIN.gets.chomp
   puts "Save restaurant? [Y/n]"
   if STDIN.gets.chomp.eql? "Y"
+    restaurant = add_location(restaurant)
     File.open("config/restaurants.yml", "a+") {|f| f.write([restaurant].to_yaml.gsub("---", "")) }
 
     module_template = "class #{to_module_name(restaurant['name'])}\n  def self.get_meals(data)\n    # scraping goes here\n    # return meals\n  end\nend"
@@ -167,6 +168,22 @@ end
 
 def translator
   BingTranslator.new(CREDENTIALS["azure"]["client_id"], CREDENTIALS["azure"]["client_secret"])
+end
+
+def add_location(restaurant)
+  begin
+    geocode_base_url = "http://maps.googleapis.com/maps/api/geocode/json?"
+    params = URI.encode_www_form(:address => restaurant["address"], :sensor => false)
+    data = JSON.parse(open(geocode_base_url+params).read)
+    if data["results"].count > 0
+      restaurant["location"] = data["results"][0]["geometry"]["location"]
+      restaurant["location"].each{|k,v| restaurant["location"][k] = v.round(7)}
+    end
+  rescue
+    puts colorize("Failed getting location for #{restaurant["name"]} from Google Maps API!", 31)
+  ensure
+    return restaurant
+  end
 end
 
 def add_translations(restaurant)

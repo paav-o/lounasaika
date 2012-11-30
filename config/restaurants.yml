@@ -1,9 +1,13 @@
+---
 - name: Teekkariravintolat
   address: Otakaari 24, Espoo
   campus: Otaniemi
   open: Mon-Thu 10:30-16:00, Fri 10:30-15:00, Sat 11:30-15:00
   url:
     fi: http://www.sodexo.fi/dipoli
+  location:
+    lat: 60.1847778
+    lng: 24.8309887
 
 - name: TUAS-talo
   address: Otaniementie 17, Espoo
@@ -12,6 +16,9 @@
   url:
     fi: http://www.amica.fi/TUAS
     en: http://www.amica.fi/en/TUAS
+  location:
+    lat: 60.1868196
+    lng: 24.8187598
 
 - name: Alvari
   address: Otakaari 2, Espoo
@@ -20,6 +27,9 @@
   url:
     fi: http://www.amica.fi/alvari
     en: http://www.amica.fi/en/alvari
+  location:
+    lat: 60.1862055
+    lng: 24.8262297
 
 - name: Elissa
   address: Otakaari 2, Espoo
@@ -27,6 +37,9 @@
   open: Mon-Thu 08:00-18:00, Fri 08:00-15:00
   url:
     fi: http://www.amica.fi/elissa
+  location:
+    lat: 60.1862055
+    lng: 24.8262297
 
 - name: Täffä
   address: Otakaari 22, Espoo
@@ -35,6 +48,9 @@
   url:
     fi: https://www.teknologforeningen.fi/index.php?option=com_content&view=article&id=277&Itemid=128&lang=fi
     en: https://www.teknologforeningen.fi/index.php?option=com_content&view=article&id=277&Itemid=128&lang=en
+  location:
+    lat: 60.1858857
+    lng: 24.83245
 
 - name: Puu
   address: Tekniikantie 3, Espoo
@@ -42,6 +58,9 @@
   open: Mon-Fri 10:30-13:30
   url:
     fi: http://www.amica.fi/Puu2
+  location:
+    lat: 60.1805857
+    lng: 24.8249123
 
 - name: Kvarkki
   address: Otakaari 3, Espoo
@@ -50,6 +69,9 @@
   url:
     fi: http://www.amica.fi/kvarkki
     en: http://www.amica.fi/en/kvarkki
+  location:
+    lat: 60.1883476
+    lng: 24.8294072
 
 - name: Silinteri
   address: Otakaari 1 D, Espoo
@@ -57,6 +79,9 @@
   open: Mon-Fri 10:45-14:00
   url:
     fi: http://www.amica.fi/silinteri
+  location:
+    lat: 60.1869326
+    lng: 24.8272611
 
 - name: Cantina
   address: Otakaari 24, Espoo
@@ -64,6 +89,9 @@
   open: Mon-Thu 11:00-22:30, Fri 11:00-22:30, Sat 11:00-17:00
   url:
     fi: http://www.sodexo.fi/cantina
+  location:
+    lat: 60.1847778
+    lng: 24.8309887
 
 - name: Laurea Otaniemi
   address: Metsänpojankuja 3, Espoo
@@ -71,13 +99,9 @@
   open: Mon-Thu 11:00-13:15, Fri 11:00-13:00
   url:
     fi: http://www.amica.fi/laureaotaniemi
-
-# - name: Katri Antell Otaniemi
-#   address: Lämpömiehenkuja 2, Espoo
-#   campus: Otaniemi
-#   open: Mon-Fri 11:00-14:00
-#   url:
-#     fi: http://www.antell.fi/docs/lunch.php?Antell-ravintola%20Aalto%20yliopisto
+  location:
+    lat: 60.1858113
+    lng: 24.8054439
 
 - name: Rafla
   address: Runeberginkatu 14, Helsinki
@@ -94,6 +118,9 @@
   url:
     fi: http://www.amica.fi/chydenia
     en: http://www.amica.fi/en/chydenia
+  location:
+    lat: 60.1735677
+    lng: 24.9222099
 
 - name: Hanken
   address: Arkadiankatu 22, Helsinki
@@ -102,6 +129,9 @@
   url:
     fi: http://www.amica.fi/hanken
     en: http://www.amica.fi/en/hanken
+  location:
+    lat: 60.1712571
+    lng: 24.9243845
 
 - name: Sibelius-Akatemia / R-Talo
   address: Pohjoinen Rautatiekatu 9, Helsinki
@@ -110,6 +140,9 @@
   url:
     fi: http://www.amica.fi/r-talo
     en: http://www.amica.fi/en/r-talo
+  location:
+    lat: 60.1715396
+    lng: 24.9325754
 
 - name: Cafe da Capo
   address: Töölönkatu 28, Helsinki
@@ -118,6 +151,9 @@
   url:
     fi: http://www.amica.fi/cafedacapo
     en: http://www.amica.fi/en/cafedacapo
+  location:
+    lat: 60.1785198
+    lng: 24.9266378
 
 - name: HYSn Osakuntabaari
   address: Urho Kekkosen katu 4-6 D, Helsinki
@@ -125,13 +161,9 @@
   open: Mon-Thu 11:00-15:30, Fri 11:00-15:00
   url:
     fi: http://www.hys.net/opiskelijapalvelut/osakuntabaari/ruokalista
-
-# - name: Musiikkitalon Ravintola
-#   address: Mannerheimintie 13, Helsinki
-#   campus: Töölö
-#   open: Mon-Fri 11:00-15:00
-#   url:
-#     fi: http://www.tapahtumaravintolat.fi/musiikkitalo/fi_FI/etusivu/
+  location:
+    lat: 60.1687878
+    lng: 24.9343696
 
 - name: Kipsari
   address: Hämeentie 135 E, Helsinki
@@ -139,6 +171,9 @@
   open: Mon-Fri 08:00-19:00
   url:
     fi: https://www.facebook.com/kipsari
+  location:
+    lat: 60.2087625
+    lng: 24.9756101
 
 - name: Meccala
   address: Hämeentie 135 C, Helsinki
@@ -147,6 +182,9 @@
   url:
     fi: http://www.amica.fi/meccala
     en: http://www.amica.fi/en/meccala
+  location:
+    lat: 60.2087625
+    lng: 24.9756101
 
 # - name: Ravintola Arabianranta
 #   address: Hämeentie 135 A, Helsinki
@@ -162,6 +200,9 @@
   url:
     fi: http://www.hyyravintolat.fi/rss/fin/10/
     en: http://www.hyyravintolat.fi/rss/eng/10/
+  location:
+    lat: 60.2060455
+    lng: 24.9634222
 
 - name: Unicafe Exactum
   address: Gustaf Hällströmin katu 2 B, Helsinki
@@ -170,6 +211,9 @@
   url:
     fi: http://www.hyyravintolat.fi/rss/fin/11/
     en: http://www.hyyravintolat.fi/rss/eng/11/
+  location:
+    lat: 60.2049747
+    lng: 24.9634712
 
 - name: Unicafe Metsätalo
   address: Fabianinkatu 39, Helsinki
@@ -178,6 +222,9 @@
   url:
     fi: http://www.hyyravintolat.fi/rss/fin/1/
     en: http://www.hyyravintolat.fi/rss/eng/1/
+  location:
+    lat: 60.1722975
+    lng: 24.949109
 
 - name: Unicafe Olivia
   address: Siltavuorenpenger 5 A, Helsinki
@@ -234,6 +281,9 @@
   url:
     fi: http://www.hyyravintolat.fi/rss/fin/7/
     en: http://www.hyyravintolat.fi/rss/eng/7/
+  location:
+    lat: 60.173379
+    lng: 24.9506235
 
 - name: Unicafe Ylioppilasaukio
   address: Mannerheimintie 3 B, Helsinki
@@ -242,6 +292,9 @@
   url:
     fi: http://www.hyyravintolat.fi/rss/fin/8/
     en: http://www.hyyravintolat.fi/rss/eng/8/
+  location:
+    lat: 60.1693166
+    lng: 24.9408102
 
 - name: Kasvisbaari
   address: Kaikukatu 4 B, Helsinki
@@ -249,6 +302,9 @@
   open: Mon-Fri 11:00-16:00
   url:
     fi: http://www.kasvisbaari.fi/menu.php
+  location:
+    lat: 60.1830135
+    lng: 24.9591233
 
 - name: Unicafe Kookos
   address: Haapaniemenkatu 6, Helsinki
@@ -257,6 +313,9 @@
   url:
     fi: http://www.hyyravintolat.fi/rss/fin/16/
     en: http://www.hyyravintolat.fi/rss/eng/16/
+  location:
+    lat: 60.1811256
+    lng: 24.9587522
 
 - name: Unicafe Biokeskus
   address: Viikinkaari 9, Helsinki
@@ -265,6 +324,9 @@
   url:
     fi: http://www.hyyravintolat.fi/rss/fin/18/
     en: http://www.hyyravintolat.fi/rss/eng/18/
+  location:
+    lat: 60.2269484
+    lng: 25.0139846
 
 - name: Unicafe Korona
   address: Viikinkaari 11, Helsinki
@@ -273,6 +335,9 @@
   url:
     fi: http://www.hyyravintolat.fi/rss/fin/19/
     en: http://www.hyyravintolat.fi/rss/eng/19/
+  location:
+    lat: 60.2271911
+    lng: 25.0123344
 
 - name: Unicafe Viikuna
   address: Agnes Sjöbergin katu 2, Helsinki
@@ -281,6 +346,9 @@
   url:
     fi: http://www.hyyravintolat.fi/rss/fin/21/
     en: http://www.hyyravintolat.fi/rss/eng/21/
+  location:
+    lat: 60.229297
+    lng: 25.0218129
 
 - name: Tähkä
   address: Koetilantie 7, Helsinki
@@ -288,6 +356,9 @@
   open: Mon-Thu 10:30-13:30, Fri 10:30-13:00
   url:
     fi: http://www.amica.fi/tahka
+  location:
+    lat: 60.2230593
+    lng: 25.0206768
 
 - name: Ladonlukko
   address: Latokartanonkaari 9 A, Helsinki
@@ -295,3 +366,6 @@
   open: Mon-Fri 10:30-14:30
   url:
     fi: http://www.sodexo.fi/ravintolaladonlukko
+  location:
+    lat: 60.2290679
+    lng: 25.0185889
