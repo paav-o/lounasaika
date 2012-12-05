@@ -190,7 +190,8 @@
       var random;
       random = Math.floor(Math.random() * data.length);
       $('#announcement p').html(data[random]['text']);
-      return $('#announcement p a').attr('href', data[random]['href']);
+      $('#announcement p a').attr('href', data[random]['href']);
+      return $('#announcement p a').attr('onClick', "recordOutboundLink(this, 'Outbound Links', '" + data[random]['id'] + "'); return false;");
     });
   });
 
@@ -220,15 +221,15 @@
         </span>
       </div>
       <div class='header_inside'>
-        <a title="Jäikö nälkä? Anna palautetta!" href="javascript:UserVoice.showPopupWidget();">Palaute</a>
+        <a title="Jäikö nälkä? Anna palautetta!" onClick="recordOutboundLink(this, 'Outbound Links', 'Feedback'); return false;" href="javascript:UserVoice.showPopupWidget();">Palaute</a>
         |
         <!-- = link_to I18n.t(:mobile), "api", :title => I18n.t(:mobile_title) -->
         <!-- | -->
-        <a title="Liity faniksi Facebookissa!" href="http://www.facebook.com/lounasaika">Facebook</a>
+        <a title="Liity faniksi Facebookissa!" onClick="recordOutboundLink(this, 'Outbound Links', 'Facebook'); return false;" href="http://www.facebook.com/lounasaika">Facebook</a>
         |
-        <a title="Palvelu on avointa lähdekoodia. Osallistu kehittämiseen Githubissa!" href="http://github.com/paav-o/lounasaika">Github</a>
+        <a title="Palvelu on avointa lähdekoodia. Osallistu kehittämiseen Githubissa!" onClick="recordOutboundLink(this, 'Outbound Links', 'Github'); return false;" href="http://github.com/paav-o/lounasaika">Github</a>
         |
-        <a title="Kiinnostaako mashup-palveluiden kehitys? Tutustu avoimeen rajapintaan!" href="/api.html">API</a>
+        <a title="Kiinnostaako mashup-palveluiden kehitys? Tutustu avoimeen rajapintaan!" onClick="recordOutboundLink(this, 'Outbound Links', 'api.html'); return false;" href="/api.html">API</a>
         |
         <a title="In English" href="/en/">In English</a>
       </div>
@@ -255,9 +256,10 @@
     </ul>
     <script type='text/javascript'>
       //<![CDATA[
-        # Google Analytics
+        // Google Analytics
         var _gaq = _gaq || [];
         _gaq.push(['_setAccount', 'UA-18527581-1']);
+        _gaq.push(['_setDomainName', 'lounasaika.net']);
         _gaq.push(['_trackPageview']);
         
         (function() {
@@ -265,6 +267,18 @@
           ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
           var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
         })();
+      //]]>
+    </script>
+    <script type='text/javascript'>
+      //<![CDATA[
+        function recordOutboundLink(link, category, action) {
+          try {
+            var myTracker=_gat._getTrackerByName();
+            _gaq.push(['myTracker._trackEvent', category , action ]);
+            setTimeout('document.location = "' + link.href + '"', 100)
+          }
+          catch(err){}
+        }
       //]]>
     </script>
     <script type='text/javascript'>

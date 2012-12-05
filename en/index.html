@@ -190,7 +190,8 @@
       var random;
       random = Math.floor(Math.random() * data.length);
       $('#announcement p').html(data[random]['text']);
-      return $('#announcement p a').attr('href', data[random]['href']);
+      $('#announcement p a').attr('href', data[random]['href']);
+      return $('#announcement p a').attr('onClick', "recordOutboundLink(this, 'Outbound Links', '" + data[random]['id'] + "'); return false;");
     });
   });
 
@@ -220,15 +221,15 @@
         </span>
       </div>
       <div class='header_inside'>
-        <a title="We are hungry for your feedback, give some!" href="javascript:UserVoice.showPopupWidget();">Feedback</a>
+        <a title="We are hungry for your feedback, give some!" onClick="recordOutboundLink(this, 'Outbound Links', 'Feedback'); return false;" href="javascript:UserVoice.showPopupWidget();">Feedback</a>
         |
         <!-- = link_to I18n.t(:mobile), "api", :title => I18n.t(:mobile_title) -->
         <!-- | -->
-        <a title="Become fan on Facebook!" href="http://www.facebook.com/lounasaika">Facebook</a>
+        <a title="Become fan on Facebook!" onClick="recordOutboundLink(this, 'Outbound Links', 'Facebook'); return false;" href="http://www.facebook.com/lounasaika">Facebook</a>
         |
-        <a title="I'm open source, fork me on Github!" href="http://github.com/paav-o/lounasaika">Github</a>
+        <a title="I'm open source, fork me on Github!" onClick="recordOutboundLink(this, 'Outbound Links', 'Github'); return false;" href="http://github.com/paav-o/lounasaika">Github</a>
         |
-        <a title="API available, want to develop some mashup goodness?" href="/api.html">API</a>
+        <a title="API available, want to develop some mashup goodness?" onClick="recordOutboundLink(this, 'Outbound Links', 'api.html'); return false;" href="/api.html">API</a>
         |
         <a title="Suomeksi" href="/">Suomeksi</a>
       </div>
@@ -255,9 +256,10 @@
     </ul>
     <script type='text/javascript'>
       //<![CDATA[
-        # Google Analytics
+        // Google Analytics
         var _gaq = _gaq || [];
         _gaq.push(['_setAccount', 'UA-18527581-1']);
+        _gaq.push(['_setDomainName', 'lounasaika.net']);
         _gaq.push(['_trackPageview']);
         
         (function() {
@@ -265,6 +267,18 @@
           ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
           var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
         })();
+      //]]>
+    </script>
+    <script type='text/javascript'>
+      //<![CDATA[
+        function recordOutboundLink(link, category, action) {
+          try {
+            var myTracker=_gat._getTrackerByName();
+            _gaq.push(['myTracker._trackEvent', category , action ]);
+            setTimeout('document.location = "' + link.href + '"', 100)
+          }
+          catch(err){}
+        }
       //]]>
     </script>
     <script type='text/javascript'>
