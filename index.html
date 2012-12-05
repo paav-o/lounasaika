@@ -46,6 +46,19 @@
     String.prototype.capitalize = function() {
       return this.substr(0, 1).toUpperCase() + this.substr(1);
     };
+    (function($) {
+      var _old;
+      _old = $.unique;
+      return $.unique = function(arr) {
+        if (!!arr[0].nodeType) {
+          return _old.apply(this, arguments_);
+        } else {
+          return $.grep(arr, function(v, k) {
+            return $.inArray(v, arr) === k;
+          });
+        }
+      };
+    })(jQuery);
     $('#weekdays a').live('click', function(event) {
       window.day = $(this).attr('id');
       reloadContent();
@@ -112,7 +125,7 @@
       campi = $.map(data, function(c) {
         return c['campus'];
       });
-      return $.unique(campi).reverse();
+      return $.unique(campi);
     };
     renderCampusLinks = function(campi) {
       $('<a>', {

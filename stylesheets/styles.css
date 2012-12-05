@@ -92,6 +92,10 @@ padding: 0;
 margin: 5px 25px 7px 0;
 }
 
+#restaurants {
+float: left;
+}
+
 .nav a {
 display: block;
 float: left;
