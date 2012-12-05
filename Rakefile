@@ -74,6 +74,7 @@ task :update do
     end
 
     File.open(archive_path, "w+") {|f| f.write(restaurants.to_json) }
+    File.open(api_path+"menus.json", "w+") {|f| f.write(restaurants.to_json) }
     
   end
   puts colorize("Menus saved to #{api_path}", 32) + " (total #{total_time.round(2)})"
