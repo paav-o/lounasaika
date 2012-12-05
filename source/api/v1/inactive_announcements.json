@@ -1,0 +1,67 @@
+[
+  {
+    "id": "amnesty_kerta",
+    "text": "Amnesty puolustaa ihmisoikeuksia kaikkialla maailmassa. Tee kertalahjoitus osoitteessa <a>amnesty.fi</a>",
+    "href": "http://www.amnesty.fi/tue-toimintaa/kertalahjoitus/lahjoita"
+  },
+  {
+    "id": "amnesty_kuukausi",
+    "text": "Amnesty puolustaa ihmisoikeuksia kaikkialla maailmassa. Ryhdy kuukausilahjoittajaksi osoitteessa <a>amnesty.fi</a>",
+    "href": "http://www.amnesty.fi/tue-toimintaa/kuukausilahjoittajaksi"
+  },
+  {
+    "id": "amnesty_adoptio",
+    "text": "Adoptoi mielipidevanki tai ihmisoikeusaktivisti alkaen 10e. Anna aineeton lahja osoitteessa <a>amnestystore.fi</a>",
+    "href": "http://www.amnestystore.fi/product/239/sytyta-valo--aineeton-lahja"
+  },
+  {
+    "id": "amnesty_kynttila",
+    "text": "Harri Koskisen suunnittelema Amnesty-kynttilä on kaunis pöydällä. Osta itselle tai anna tuliaiseksi osoitteessa <a>amnestystore.fi</a>",
+    "href": "http://www.amnestystore.fi/product/230/amnesty-kynttila-paketissa-design-by-harri-koskinen"
+  },
+  {
+    "id": "spr_katastrofirahasto",
+    "text": "Punainen Risti auttaa luonnonmullistusten ja sotien uhreja ympäri maailmaa. Lahjoita osoitteessa <a>punainenristi.fi</a>",
+    "href": "http://www.punainenristi.fi/lahjoita/katastrofirahasto"
+  },
+  {
+    "id": "spr_kuukausi",
+    "text": "Punainen Risti toimittaa avun tehokkaasti perille, sinne missä avun tarve on suurin. Liity kuukausilahjoittajaksi osoitteessa <a>punainenristi.fi</a>",
+    "href": "http://www.punainenristi.fi/lahjoitukset/kuukausilahjoitukset"
+  },
+  {
+    "id": "spr_jasenyys",
+    "text": "Kukaan ei pelasta maailmaa yksin. Liity Suomen Punaisen Ristin jäseneksi osoitteessa <a>punainenristi.fi</a>",
+    "href": "http://www.punainenristi.fi/lahjoitukset/vaatelahjoitus"
+  },
+  {
+    "id": "unicef_kuukausi",
+    "text": "UNICEF auttaa heikoimmassa asemassa olevia lapsia kaikkialla maailmassa. Ryhdy kuukausilahjoittajaksi osoitteessa <a>unicef.fi</a>",
+    "href": "http://www.unicef.fi/lapsi"
+  },
+  {
+    "id": "unicef_lahjoitus",
+    "text": "UNICEF auttaa lapsia, jotka joutuvat taistelemaan pysyäkseen hengissä. Lahjoita osoitteessa <a>unicef.fi</a>",
+    "href": "http://www.unicef.fi/lahjoita"
+  },
+  {
+    "id": "unicef_paketti",
+    "text": "UNICEFin Pehmeä paketti on lahja, jolla ilahdutat sen vastaanottajaa ja samalla autat maailman lapsia. Lue lisää osoitteessa <a>wwf.fi</a>",
+    "href": "http://www.pehmeapaketti.fi/miten-pehmea-toimii"
+  },
+  {
+    "id": "wwf_tavoite",
+    "text": "WWF:n tavoitteena on maapallo, jossa ihmiskunta elää sopusoinnussa luonnon kanssa. Tutustu toimintaan osoitteessa <a>wwf.fi</a>",
+    "href": "http://wwf.fi/"
+  },
+  {
+    "id": "wwf_kerta",
+    "text": "Kun luonto voi hyvin, ihminenkin voi hyvin. Tee kertalahjoitus WWF:lle osoitteessa <a>wwf.fi</a>",
+    "href": "http://wwf.fi/yleislahjoitus"
+  },
+  {
+    "id": "wwf_norppakummi",
+    "text": "Saimaannorppa on yksi maailman uhanalaisimmista hylkeistä. Ryhdy WWF:n norppakummiksi osoitteessa <a>wwf.fi</a>",
+    "href": "http://wwf.fi/norppakummi"
+  },
+]

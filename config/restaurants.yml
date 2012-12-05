@@ -165,6 +165,16 @@
     lat: 60.1687878
     lng: 24.9343696
 
+- name: Musiikkitalon Ravintola
+  address: Mannerheimintie 13 A, Helsinki
+  campus: Töölö
+  open: Mon-Fri 11:00-15:00
+  url:
+    fi: http://www.tapahtumaravintolat.fi/musiikkitalo/Ravintolapalvelut/fi_FI/Ravintola/
+  location:
+    lat: 60.1731905
+    lng: 24.9344303
+
 - name: Kipsari
   address: Hämeentie 135 E, Helsinki
   campus: Arabia
@@ -186,12 +196,12 @@
     lat: 60.2087625
     lng: 24.9756101
 
-# - name: Ravintola Arabianranta
-#   address: Hämeentie 135 A, Helsinki
-#   campus: Arabia
-#   open: Mon-Fri 10:30-13:30
-#   url:
-#     fi: http://www.compass-group.fi/ravintolat/Helsinki/ravintola-arabianranta/Lounaslista/
+- name: Ravintola Arabianranta
+  address: Hämeentie 135 A, Helsinki
+  campus: Arabia
+  open: Mon-Fri 10:30-13:30
+  url:
+    fi: http://www.compass-group.fi/ravintolat/Helsinki/ravintola-arabianranta/Lounaslista/
 
 - name: Unicafe Chemicum
   address: A.I. Virtasen aukio 1, Helsinki

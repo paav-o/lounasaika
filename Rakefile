@@ -91,14 +91,15 @@ task :new_restaurant do
   restaurant["campus"] = STDIN.gets.chomp
   puts "Opening times [Mon-Thu 10:30-16:00, Fri 10:30-15:00]:"
   restaurant["open"] = STDIN.gets.chomp
-  puts "Menu url [http://www.unicafe.fi/index.php/Keskusta/Ylioppilasaukio]:"
-  restaurant["url"] = STDIN.gets.chomp
+  restaurant["url"] = {}
+  puts "Finnish menu url [http://www.unicafe.fi/index.php/Keskusta/Ylioppilasaukio]:"
+  restaurant["url"]["fi"] = STDIN.gets.chomp
   puts "Save restaurant? [Y/n]"
   if STDIN.gets.chomp.eql? "Y"
     restaurant = add_location(restaurant)
     File.open("config/restaurants.yml", "a+") {|f| f.write([restaurant].to_yaml.gsub("---", "")) }
 
-    module_template = "class #{to_module_name(restaurant['name'])}\n  def self.get_meals(data)\n    # scraping goes here\n    # return meals\n  end\nend"
+    module_template = "class #{to_module_name(restaurant['name'])}\n  def self.get_meals(data, meals)\n    # scraping goes here\n    return meals\n  end\nend"
     file_name = to_filename(restaurant['name'])
     file_path = "lib/#{file_name}"
     File.open(file_path, "w") {|f| f.write(module_template) }
@@ -122,7 +123,6 @@ task :test, :filename do |t, args|
 
   meals = {"fi" => [], "en" => []}
   restaurant["meals"] = scraper.get_meals(data, meals)
-  restaurant = add_translations(restaurant)
 
   jj restaurant["meals"]
 

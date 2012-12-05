@@ -9,7 +9,7 @@
       %a{:href => "http://www.lounasaika.net/"}
         lounasaika.net
     %span#slogan
-      %span#day
+      %span#day= I18n.t(:todays)
       = I18n.t(:campus_menus)
   .header_inside
     = link_to I18n.t(:feedback), "javascript:UserVoice.showPopupWidget();", :title => I18n.t(:feedback_title)
@@ -33,12 +33,26 @@
         {{name}}
     .open
       {{status}}
-      %a.tooltip{:href => "#", :onclick => "return false;", :rel => "<dl><dt>{{name}} ({{campus}})</dt><dd>{{address}}</dd><br/><dt>Maanantaista torstaihin:</dt><dd>00:00 - 00:00</dd><dt>Perjantaisin:</dt><dd>00:00 - 00:00</dd><dt>Lauantaisin:</dt><dd>suljettu</dd></dl><img src='http://maps.google.com/maps/api/staticmap?center={{address}}&zoom=14&size=250x200&maptype=roadmap&markers=color:green|{{address}}&sensor=false'>"} [info]
+      %a.tooltip{:href => "#", :onclick => "return false;", :rel => "<dl><dt>{{name}} ({{campus}})</dt><dd>{{address}}</dd><br/>{{openingTimesDefList}}</dl><img src='http://maps.google.com/maps/api/staticmap?center={{address}}&zoom=14&size=250x200&maptype=roadmap&markers=color:green|{{address}}&sensor=false'>"} [info]
     %ul.meals
       %li{"data-template" => "mealsToday"}
         {{.}}
 
 :coffeescript
+  # Google Analytics
+  _gaq = _gaq or []
+  _gaq.push ["_setAccount", "UA-18527581-1"]
+  _gaq.push ["_trackPageview"]
+  (->
+    ga = document.createElement("script")
+    ga.type = "text/javascript"
+    ga.async = true
+    ga.src = ((if "https:" is document.location.protocol then "https://ssl" else "http://www")) + ".google-analytics.com/ga.js"
+    s = document.getElementsByTagName("script")[0]
+    s.parentNode.insertBefore ga, s
+  )()
+
+  # UserVoice
   uvOptions = {}
   (->
     uv = document.createElement("script")

@@ -16,7 +16,7 @@
     %p{:style => "text-align: right;"}
       %strong Lounasaika.net API V1 BETA
       %br/
-      (updated 2012-11-29)
+      (updated 2012-12-05)
       %p
         %h1 Audience
         %p This document is intended for website and mobile developers who want to use student restaurant menu data provided by Lounasaika.net API. It provides an introduction to using this API. Any feedback will be greatly appreciated.
@@ -44,6 +44,10 @@
                 "open": "Mon-Thu 10:30-16:00, Fri 10:30-15:00, Sat 11:30-15:00",
                 "url": {
                   "fi": "http://www.sodexo.fi/dipoli"
+                },
+                "location": {
+                  "lat": 60.1847778,
+                  "lng": 24.8309887
                 },
                 "meals": {
                   "fi": [
@@ -101,6 +105,10 @@
                   "fi": "http://www.amica.fi/TUAS",
                   "en": "http://www.amica.fi/en/TUAS"
                 },
+                "location": {
+                  "lat": 60.1868196,
+                  "lng": 24.8187598
+                },
                 "meals": {
                   "fi": [],
                   "en": []
@@ -112,3 +120,17 @@
           Note that these results generally need to be parsed if you wish to extract values from the results. Parsing JSON is relatively easy. See
           %a{:href => "http://code.google.com/apis/maps/documentation/webservices/index.html#ParsingJSON"} Parsing JSON
           for some recommended design patterns.
+
+    :coffeescript
+      / Google Analytics
+      _gaq = _gaq or []
+      _gaq.push ["_setAccount", "UA-18527581-1"]
+      _gaq.push ["_trackPageview"]
+      (->
+        ga = document.createElement("script")
+        ga.type = "text/javascript"
+        ga.async = true
+        ga.src = ((if "https:" is document.location.protocol then "https://ssl" else "http://www")) + ".google-analytics.com/ga.js"
+        s = document.getElementsByTagName("script")[0]
+        s.parentNode.insertBefore ga, s
+      )()

@@ -8,7 +8,9 @@ fi:
   mobile: Mobiili
   mobile_title: Kokeile sivun mobiiliversiota
 
+  todays: Päivän
   campus_menus: poikkitieteelliset ruokalistat
+  genitive_suffix: n
 
   other_language_path: /en/
   other_language_long: In English
