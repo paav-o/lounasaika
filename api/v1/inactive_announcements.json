@@ -37,31 +37,61 @@
   {
     "id": "unicef_kuukausi",
     "text": "UNICEF auttaa heikoimmassa asemassa olevia lapsia kaikkialla maailmassa. Ryhdy kuukausilahjoittajaksi osoitteessa <a>unicef.fi</a>",
-    "href": "http://www.unicef.fi/lapsi"
+    "href": "http://j.mp/unicef-fi"
   },
   {
     "id": "unicef_lahjoitus",
     "text": "UNICEF auttaa lapsia, jotka joutuvat taistelemaan pysyäkseen hengissä. Lahjoita osoitteessa <a>unicef.fi</a>",
-    "href": "http://www.unicef.fi/lahjoita"
+    "href": "http://j.mp/unicef-fi"
   },
   {
     "id": "unicef_paketti",
-    "text": "UNICEFin Pehmeä paketti on lahja, jolla ilahdutat sen vastaanottajaa ja samalla autat maailman lapsia. Lue lisää osoitteessa <a>wwf.fi</a>",
-    "href": "http://www.pehmeapaketti.fi/miten-pehmea-toimii"
+    "text": "UNICEFin Pehmeä paketti on lahja, jolla ilahdutat sen vastaanottajaa ja samalla autat maailman lapsia. Lue lisää osoitteessa <a>pehmeapaketti.fi</a>",
+    "href": "http://j.mp/unicef-fi"
   },
   {
     "id": "wwf_tavoite",
     "text": "WWF:n tavoitteena on maapallo, jossa ihmiskunta elää sopusoinnussa luonnon kanssa. Tutustu toimintaan osoitteessa <a>wwf.fi</a>",
-    "href": "http://wwf.fi/"
+    "href": "http://j.mp/wwf-fi"
   },
   {
     "id": "wwf_kerta",
     "text": "Kun luonto voi hyvin, ihminenkin voi hyvin. Tee kertalahjoitus WWF:lle osoitteessa <a>wwf.fi</a>",
-    "href": "http://wwf.fi/yleislahjoitus"
+    "href": "http://j.mp/wwf-fi"
   },
   {
     "id": "wwf_norppakummi",
     "text": "Saimaannorppa on yksi maailman uhanalaisimmista hylkeistä. Ryhdy WWF:n norppakummiksi osoitteessa <a>wwf.fi</a>",
-    "href": "http://wwf.fi/norppakummi"
+    "href": "http://j.mp/wwf-fi"
   },
+  {
+    "id": "kirkon_ulkomaanapu_1",
+    "text": "Katastrofeista kärsivät ihmiset tarvitsevat apuasi. Lahjoita Kirkon Ulkomaanavulle osoitteessa <a>kirkonulkomaanapu.fi</a>",
+    "href": "http://j.mp/kirkonulkomaanapu-fi"
+  },
+  {
+    "id": "kirkon_ulkomaanapu_2",
+    "text": "Auta kodeistaan paenneita ja liity Kirkon Ulkomaanavun kuukausilahjoittajaksi osoitteessa <a>kirkonulkomaanapu.fi</a>",
+    "href": "http://j.mp/kirkonulkomaanapu-fi"
+  },
+  {
+    "id": "world_vision_1",
+    "text": "World Visionin kummina autat heikoimmassa asemassa olevia kehitysmaan lapsia ja perheitä. Lue lisää osoitteessa <a>worldvision.fi</a>",
+    "href": "http://j.mp/worldvision-fi"
+  },
+  {
+    "id": "world_vision_2",
+    "text": "Alle eurolla päivässä voit antaa kehitysmaan lapselle tulevaisuuden toivon. Lue lisää osoitteessa <a>worldvision.fi</a>",
+    "href": "http://j.mp/worldvision-fi"
+  },
+  {
+    "id": "world_vision_3",
+    "text": "Muuta heikoimmassa asemassa olevien lasten elämää. Pysyvästi. Ryhdy kummiksi osoitteessa <a>worldvision.fi</a>",
+    "href": "http://j.mp/worldvision-fi"
+  },
+  {
+    "id": "world_vision_4",
+    "text": "Olisiko sinun sydämessäsi paikka kummilapselle? Ryhdy kummiksi tänään osoitteessa <a>worldvision.fi</a>",
+    "href": "http://j.mp/worldvision-fi"
+  }
 ]
