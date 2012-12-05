@@ -72,8 +72,9 @@
     });
     lounasaika = Tempo.prepare('restaurants');
     parseRestaurantStatus = function(openingTimes) {
-      var status;
-      status = 'Kiinni';
+      var closedCssClass, statusString;
+      statusString = 'Kiinni';
+      closedCssClass = 'closed';
       $(openingTimes.split(', ')).each(function(i, range) {
         var firstDay, lastDay, timeRange, weekdayRange;
         weekdayRange = range.split(' ')[0].split('-');
@@ -82,11 +83,12 @@
         if (window.day >= firstDay && window.day <= lastDay) {
           timeRange = range.split(' ')[1].split('-');
           if (time >= timeRange[0].replace(/:/g, '') && time <= timeRange[1].replace(/:/g, '')) {
-            return status = 'Avoinna klo ' + timeRange[1] + ' saakka';
+            statusString = 'Avoinna klo ' + timeRange[1] + ' saakka';
+            return closedCssClass = '';
           }
         }
       });
-      return status;
+      return [statusString, closedCssClass];
     };
     parseRestaurantOpeningTimes = function(openingTimes) {
       var openingTimesDefList;
@@ -165,7 +167,8 @@
         });
       }
       $(data).each(function(i, restaurant) {
-        restaurant.status = parseRestaurantStatus(restaurant.open);
+        restaurant.status = parseRestaurantStatus(restaurant.open)[0];
+        restaurant.closedCssClass = parseRestaurantStatus(restaurant.open)[1];
         restaurant.openingTimesDefList = parseRestaurantOpeningTimes(restaurant.open);
         restaurant.url_by_lang = restaurant.url['fi'] || restaurant.url['fi'];
         if (restaurant.meals) {
@@ -247,7 +250,7 @@
           {{status}}
           <a class='tooltip' href='#' onclick='return false;' rel="&lt;dl&gt;&lt;dt&gt;{{name}} ({{campus}})&lt;/dt&gt;&lt;dd&gt;{{address}}&lt;/dd&gt;&lt;br/&gt;{{openingTimesDefList}}&lt;/dl&gt;&lt;img src='http://maps.google.com/maps/api/staticmap?center={{address}}&amp;zoom=14&amp;size=250x200&amp;maptype=roadmap&amp;markers=color:green|{{address}}&amp;sensor=false'&gt;">[info]</a>
         </div>
-        <ul class='meals'>
+        <ul class='meals {{closedCssClass}}'>
           <li data-template='mealsToday'>
             {{.}}
           </li>

@@ -224,8 +224,7 @@ clear: both;
 }
 
 .closed {
-opacity: 0.9;
-padding: 0 15px 0 0;
+opacity: 0.7;
 }
 
 .meals {
