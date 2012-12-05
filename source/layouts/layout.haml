@@ -132,7 +132,8 @@
             rootPath = '/'
           if window.campus != undefined
             newPath = rootPath+window.campus.toLowerCase()
-          window.history.pushState(null, null, newPath || rootPath)
+          if !($.browser.msie && parseFloat($.browser.version) < 10)
+            window.history.pushState(null, null, newPath || rootPath)
           if window.campus
             data = $.grep data, (n, i) ->
               n.campus == window.campus.capitalize()
