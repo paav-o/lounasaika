@@ -20,7 +20,7 @@ require "pdf/reader"
 require "middleman-gh-pages"
 
 # scraper libraries
-Dir.glob("lib/*.rb").each { |file| import file }
+Dir.glob("lib/*.rb").sort.each { |file| import file }
 
 CREDENTIALS = YAML.load_file("config/credentials.yml")
 
