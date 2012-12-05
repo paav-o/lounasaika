@@ -120,17 +120,3 @@
           Note that these results generally need to be parsed if you wish to extract values from the results. Parsing JSON is relatively easy. See
           %a{:href => "http://code.google.com/apis/maps/documentation/webservices/index.html#ParsingJSON"} Parsing JSON
           for some recommended design patterns.
-
-    :coffeescript
-      / Google Analytics
-      _gaq = _gaq or []
-      _gaq.push ["_setAccount", "UA-18527581-1"]
-      _gaq.push ["_trackPageview"]
-      (->
-        ga = document.createElement("script")
-        ga.type = "text/javascript"
-        ga.async = true
-        ga.src = ((if "https:" is document.location.protocol then "https://ssl" else "http://www")) + ".google-analytics.com/ga.js"
-        s = document.getElementsByTagName("script")[0]
-        s.parentNode.insertBefore ga, s
-      )()

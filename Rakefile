@@ -17,7 +17,7 @@ require "yaml"
 require "bing_translator"
 require "nokogiri"
 require "pdf/reader"
-#require "middleman-gh-pages"
+require "middleman-gh-pages"
 
 # scraper libraries
 Dir.glob("lib/*.rb").each { |file| import file }
