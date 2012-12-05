@@ -34,6 +34,19 @@
         String::capitalize = ->
           return this.substr(0, 1).toUpperCase() + this.substr(1)
 
+        # Use jQuery $.unique for plain JS arrays in addition to DOM arrays
+        (($) ->
+          _old = $.unique
+          $.unique = (arr) ->
+            # do the default behavior only if we got an array of elements
+            unless not arr[0].nodeType
+              _old.apply this, arguments_
+            else
+              # reduce the array to contain no dupes via grep/inArray
+              $.grep arr, (v, k) ->
+                $.inArray(v, arr) is k
+        ) jQuery
+
         # change day
         $('#weekdays a').live 'click', (event) ->
           window.day = $(this).attr('id')
@@ -93,7 +106,7 @@
           campi = $.map(data, (c) ->
             c['campus']
           )
-          $.unique(campi).reverse()
+          $.unique(campi)
 
         renderCampusLinks = (campi) ->
           $('<a>',
