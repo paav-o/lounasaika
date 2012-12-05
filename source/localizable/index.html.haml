@@ -12,15 +12,15 @@
       %span#day= I18n.t(:todays)
       = I18n.t(:campus_menus)
   .header_inside
-    = link_to I18n.t(:feedback), "javascript:UserVoice.showPopupWidget();", :title => I18n.t(:feedback_title)
+    = link_to I18n.t(:feedback), "javascript:UserVoice.showPopupWidget();", { :title => I18n.t(:feedback_title), :onClick => "recordOutboundLink(this, 'Outbound Links', 'Feedback'); return false;" }
     |
     /= link_to I18n.t(:mobile), "api", :title => I18n.t(:mobile_title)
     /|
-    = link_to "Facebook", "http://www.facebook.com/lounasaika", :title => I18n.t(:facebook_title)
+    = link_to "Facebook", "http://www.facebook.com/lounasaika", { :title => I18n.t(:facebook_title), :onClick => "recordOutboundLink(this, 'Outbound Links', 'Facebook'); return false;" }
     |
-    = link_to "Github", "http://github.com/paav-o/lounasaika", :title => I18n.t(:github_title)
+    = link_to "Github", "http://github.com/paav-o/lounasaika", { :title => I18n.t(:github_title), :onClick => "recordOutboundLink(this, 'Outbound Links', 'Github'); return false;" }
     |
-    = link_to "API", "/api.html", :title => I18n.t(:api_title)
+    = link_to "API", "/api.html", { :title => I18n.t(:api_title), :onClick => "recordOutboundLink(this, 'Outbound Links', 'api.html'); return false;" }
     |
     = link_to I18n.t(:other_language_long), I18n.t(:other_language_path), :title => I18n.t(:other_language_long)
 #weekdays.nav
@@ -39,7 +39,7 @@
         {{.}}
 
 :javascript
-  # Google Analytics
+  // Google Analytics
   var _gaq = _gaq || [];
   _gaq.push(['_setAccount', 'UA-18527581-1']);
   _gaq.push(['_setDomainName', 'lounasaika.net']);
@@ -50,6 +50,16 @@
     ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
     var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
   })();
+
+:javascript
+  function recordOutboundLink(link, category, action) {
+    try {
+      var myTracker=_gat._getTrackerByName();
+      _gaq.push(['myTracker._trackEvent', category , action ]);
+      setTimeout('document.location = "' + link.href + '"', 100)
+    }
+    catch(err){}
+  }
 
 :coffeescript
   # UserVoice
