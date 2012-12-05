@@ -63,7 +63,8 @@
         lounasaika = Tempo.prepare('restaurants')
 
         parseRestaurantStatus = (openingTimes) ->
-          status = '#{I18n.t(:closed)}'
+          statusString = '#{I18n.t(:closed)}'
+          closedCssClass = 'closed'
           $(openingTimes.split(', ')).each (i, range) ->
             weekdayRange = range.split(' ')[0].split('-')
             firstDay = weekdaysShort.indexOf weekdayRange[0]
@@ -71,8 +72,9 @@
             if (window.day >= firstDay and window.day <= lastDay)
               timeRange = range.split(' ')[1].split('-')
               if (time >= timeRange[0].replace(/:/g,'') and time <= timeRange[1].replace(/:/g,''))
-                status = '#{I18n.t(:open)} '+timeRange[1]+' #{I18n.t(:until)}'
-          status
+                statusString = '#{I18n.t(:open)} '+timeRange[1]+' #{I18n.t(:until)}'
+                closedCssClass = ''
+          [statusString, closedCssClass]
 
         parseRestaurantOpeningTimes = (openingTimes) ->
           openingTimesDefList = ''
@@ -138,7 +140,8 @@
             data = $.grep data, (n, i) ->
               n.campus == window.campus.capitalize()
           $(data).each (i, restaurant) ->
-            restaurant.status = parseRestaurantStatus(restaurant.open)
+            restaurant.status = parseRestaurantStatus(restaurant.open)[0]
+            restaurant.closedCssClass = parseRestaurantStatus(restaurant.open)[1]
             restaurant.openingTimesDefList = parseRestaurantOpeningTimes(restaurant.open)
             restaurant.url_by_lang = (restaurant.url['#{I18n.locale}'] || restaurant.url['fi'])
             if (restaurant.meals)

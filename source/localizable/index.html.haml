@@ -34,7 +34,7 @@
     .open
       {{status}}
       %a.tooltip{:href => "#", :onclick => "return false;", :rel => "<dl><dt>{{name}} ({{campus}})</dt><dd>{{address}}</dd><br/>{{openingTimesDefList}}</dl><img src='http://maps.google.com/maps/api/staticmap?center={{address}}&zoom=14&size=250x200&maptype=roadmap&markers=color:green|{{address}}&sensor=false'>"} [info]
-    %ul.meals
+    %ul.meals{:class => "{{closedCssClass}}"}
       %li{"data-template" => "mealsToday"}
         {{.}}
 
