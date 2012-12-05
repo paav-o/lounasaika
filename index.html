@@ -156,7 +156,9 @@
       if (window.campus !== void 0) {
         newPath = rootPath + window.campus.toLowerCase();
       }
-      window.history.pushState(null, null, newPath || rootPath);
+      if (!($.browser.msie && parseFloat($.browser.version) < 10)) {
+        window.history.pushState(null, null, newPath || rootPath);
+      }
       if (window.campus) {
         data = $.grep(data, function(n, i) {
           return n.campus === window.campus.capitalize();
