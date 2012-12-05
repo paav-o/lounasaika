@@ -60,6 +60,9 @@ page "api.html", :layout => false
 
 # Build-specific configuration
 configure :build do
+  # Generate favicon files in various sizes from a base image
+  activate :favicon_maker
+
   # For example, change the Compass output style for deployment
   # activate :minify_css
 
