@@ -94,6 +94,8 @@
                     "Mansikkarahkaa (G, L)"
                 ],
                 [
+                ],
+                [
                     "Tandoori-maustettua broileria, pähkinöitä ja kasviksia (G, L, M), Höyrytettyä tummaa riisiä (G, L, M)",
                     "Kasvis-vehnärisottoa ja luomutofua (*, L, M)",
                     "Tomaattikeittoa ja fetajuustoa (G, VL)",
@@ -308,6 +310,8 @@
                     "Hedelmäsalaattia (G, L, M)"
                 ],
                 [
+                ],
+                [
                     "Chilimaustettua broileri-papupataa (*, G, L, M), Höyrytettyä tummaa riisiä (G, L, M)",
                     "Pinaattikeittoa ja kananmunaa",
                     "Katkarapu-kasvissalaattia ja yrtti-kermaviilikastiketta (*, G, L)",
@@ -413,15 +417,7 @@
                     "Halloumia kreikkalaisittain (G, L)"
                 ],
                 [
-                    "Hyvää Itsenäisyyspäivää!!!",
-                    "Kinkku-ananas pizza (L)",
-                    "Salami-sipuli pizza (L)",
-                    "Jauheliha-tomaatti pizza (L)",
-                    "Tonnikala-paprika pizza (L)",
-                    "Kebab-jalapeno pizza (L)",
-                    "Tomaatti-sipuli-feta pizza (L)",
-                    "Caesarsalaatti kana/katkarapu/pekoni (L)",
-                    "Halloumia kreikkalaisittain (G, L)"
+                    "Hyvää Itsenäisyyspäivää!!!"
                 ],
                 [
                     "Parmesankuorutettua kalaa, välimerenkasviksia ja uuniperunamuusia. (G, VL)",
@@ -521,6 +517,8 @@
                     "Hedelmäsalaattia (G, L, M)"
                 ],
                 [
+                ],
+                [
                     "Jauhelihakebakoita (L, M), Pippurikastiketta (VL), Keitettyjä perunoita (*, G, L, M)",
                     "Herkkusieni-kasvispannupizzaa (*, L)",
                     "Kylmäsavulohisalaattia (G, L)",
@@ -601,6 +599,8 @@
                     "Sieni-vehnäsuurimotäytteiset paprikat (*, VL), Curry-kermaviilikastiketta (G, L)",
                     "Mozzarella-tomaattisalaattia ja paahdettua pestoleipää (VL)",
                     "Seesamkuorrutettu broilerin rintaleike tomattikastikkeessa (*, G, L, M)"
+                ],
+                [
                 ],
                 [
                     "Kinkkupizzaa (L)",
@@ -1065,6 +1065,8 @@
                     "Lounassalaatti "
                 ],
                 [
+                ],
+                [
                     "Farmarin pihvit, pippurikastiketta ",
                     "Kreikkalaista kalahöystöä (g,l,v)",
                     "Soija-sipulikastiketta (k,l,ve)",
@@ -1146,6 +1148,8 @@
                     "Broileri-vihannesmuhennosta rieskalla (l)",
                     "Juustosalaatti (g,k,l,pä)",
                     "Riisipuuroa, mansikkakeittoa (g,k)"
+                ],
+                [
                 ],
                 [
                     "Lihapyöryköitä, ruskeaa kastiketta (l,v)",
@@ -1644,6 +1648,8 @@
                     "Kasvispaella (M)",
                     "Tonnikalasalaatti (G, M)",
                     "Uunilohta, kermaviili-pikkelssikastiketta (G, L)"
+                ],
+                [
                 ],
                 [
                     "Lihapyörykät, kermainen sinappikastike (VL)",
