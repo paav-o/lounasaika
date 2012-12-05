@@ -41,6 +41,16 @@
     lat: 60.1862055
     lng: 24.8262297
 
+- name: Puu
+  address: Tekniikantie 3, Espoo
+  campus: Otaniemi
+  open: Mon-Fri 10:30-13:30
+  url:
+    fi: http://www.amica.fi/Puu2
+  location:
+    lat: 60.1805857
+    lng: 24.8249123
+
 - name: Täffä
   address: Otakaari 22, Espoo
   campus: Otaniemi
@@ -51,16 +61,6 @@
   location:
     lat: 60.1858857
     lng: 24.83245
-
-- name: Puu
-  address: Tekniikantie 3, Espoo
-  campus: Otaniemi
-  open: Mon-Fri 10:30-13:30
-  url:
-    fi: http://www.amica.fi/Puu2
-  location:
-    lat: 60.1805857
-    lng: 24.8249123
 
 - name: Kvarkki
   address: Otakaari 3, Espoo
