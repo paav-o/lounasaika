@@ -1,6 +1,97 @@
 [
   {
-    "id": "lounasaika_paivitys",
-    "text": "Uusi versio on julkaistu! Mukana englanninkieliset ruokalistat sekä paljon uusia ravintoloita. <a href='javascript:UserVoice.showPopupWidget();'>Anna palautetta</a>"
+    "id": "amnesty_kerta",
+    "text": "Amnesty puolustaa ihmisoikeuksia kaikkialla maailmassa. Tee kertalahjoitus osoitteessa <a>amnesty.fi</a>",
+    "href": "http://j.mp/amnesty-fi-1"
+  },
+  {
+    "id": "amnesty_kuukausi",
+    "text": "Amnesty puolustaa ihmisoikeuksia kaikkialla maailmassa. Ryhdy kuukausilahjoittajaksi osoitteessa <a>amnesty.fi</a>",
+    "href": "http://j.mp/amnesty-fi-2"
+  },
+  {
+    "id": "amnesty_adoptio",
+    "text": "Adoptoi mielipidevanki tai ihmisoikeusaktivisti alkaen 10e. Anna aineeton lahja osoitteessa <a>amnestystore.fi</a>",
+    "href": "http://j.mp/amnesty-fi-3"
+  },
+  {
+    "id": "amnesty_kynttila",
+    "text": "Harri Koskisen suunnittelema Amnesty-kynttilä on kaunis pöydällä. Osta itselle tai anna tuliaiseksi osoitteessa <a>amnestystore.fi</a>",
+    "href": "http://j.mp/amnesty-fi-4"
+  },
+  {
+    "id": "spr_katastrofirahasto",
+    "text": "Punainen Risti auttaa luonnonmullistusten ja sotien uhreja ympäri maailmaa. Lahjoita osoitteessa <a>punainenristi.fi</a>",
+    "href": "http://j.mp/punainenristi-fi-1"
+  },
+  {
+    "id": "spr_kuukausi",
+    "text": "Punainen Risti toimittaa avun tehokkaasti perille, sinne missä avun tarve on suurin. Liity kuukausilahjoittajaksi osoitteessa <a>punainenristi.fi</a>",
+    "href": "http://j.mp/punainenristi-fi-2"
+  },
+  {
+    "id": "spr_jasenyys",
+    "text": "Kukaan ei pelasta maailmaa yksin. Liity Suomen Punaisen Ristin jäseneksi osoitteessa <a>punainenristi.fi</a>",
+    "href": "http://j.mp/punainenristi-fi-3"
+  },
+  {
+    "id": "unicef_kuukausi",
+    "text": "UNICEF auttaa heikoimmassa asemassa olevia lapsia kaikkialla maailmassa. Ryhdy kuukausilahjoittajaksi osoitteessa <a>unicef.fi</a>",
+    "href": "http://j.mp/unicef-fi"
+  },
+  {
+    "id": "unicef_lahjoitus",
+    "text": "UNICEF auttaa lapsia, jotka joutuvat taistelemaan pysyäkseen hengissä. Lahjoita osoitteessa <a>unicef.fi</a>",
+    "href": "http://j.mp/unicef-fi"
+  },
+  {
+    "id": "unicef_paketti",
+    "text": "UNICEFin Pehmeä paketti on lahja, jolla ilahdutat sen vastaanottajaa ja samalla autat maailman lapsia. Lue lisää osoitteessa <a>pehmeapaketti.fi</a>",
+    "href": "http://j.mp/unicef-fi"
+  },
+  {
+    "id": "wwf_tavoite",
+    "text": "WWF:n tavoitteena on maapallo, jossa ihmiskunta elää sopusoinnussa luonnon kanssa. Tutustu toimintaan osoitteessa <a>wwf.fi</a>",
+    "href": "http://j.mp/wwf-fi"
+  },
+  {
+    "id": "wwf_kerta",
+    "text": "Kun luonto voi hyvin, ihminenkin voi hyvin. Tee kertalahjoitus WWF:lle osoitteessa <a>wwf.fi</a>",
+    "href": "http://j.mp/wwf-fi"
+  },
+  {
+    "id": "wwf_norppakummi",
+    "text": "Saimaannorppa on yksi maailman uhanalaisimmista hylkeistä. Ryhdy WWF:n norppakummiksi osoitteessa <a>wwf.fi</a>",
+    "href": "http://j.mp/wwf-fi"
+  },
+  {
+    "id": "kirkon_ulkomaanapu_1",
+    "text": "Katastrofeista kärsivät ihmiset tarvitsevat apuasi. Lahjoita Kirkon Ulkomaanavulle osoitteessa <a>kirkonulkomaanapu.fi</a>",
+    "href": "http://j.mp/kirkonulkomaanapu-fi"
+  },
+  {
+    "id": "kirkon_ulkomaanapu_2",
+    "text": "Auta kodeistaan paenneita ja liity Kirkon Ulkomaanavun kuukausilahjoittajaksi osoitteessa <a>kirkonulkomaanapu.fi</a>",
+    "href": "http://j.mp/kirkonulkomaanapu-fi"
+  },
+  {
+    "id": "world_vision_1",
+    "text": "World Visionin kummina autat heikoimmassa asemassa olevia kehitysmaan lapsia ja perheitä. Lue lisää osoitteessa <a>worldvision.fi</a>",
+    "href": "http://j.mp/worldvision-fi"
+  },
+  {
+    "id": "world_vision_2",
+    "text": "Alle eurolla päivässä voit antaa kehitysmaan lapselle tulevaisuuden toivon. Lue lisää osoitteessa <a>worldvision.fi</a>",
+    "href": "http://j.mp/worldvision-fi"
+  },
+  {
+    "id": "world_vision_3",
+    "text": "Muuta heikoimmassa asemassa olevien lasten elämää. Pysyvästi. Ryhdy kummiksi osoitteessa <a>worldvision.fi</a>",
+    "href": "http://j.mp/worldvision-fi"
+  },
+  {
+    "id": "world_vision_4",
+    "text": "Olisiko sinun sydämessäsi paikka kummilapselle? Ryhdy kummiksi tänään osoitteessa <a>worldvision.fi</a>",
+    "href": "http://j.mp/worldvision-fi"
   }
 ]
