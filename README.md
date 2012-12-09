@@ -26,12 +26,16 @@ Run ``rake new_restaurant`` and follow instructions.
 ```
 #!/bin/bash
 
-cd /home/users/paav-o/dev/lounasaika
-source /home/users/paav-o/.rvm/environments/default
+cd /home/users/paavo/dev/lounasaika
+source /home/users/paavo/.rvm/environments/default
+git checkout gh-pages
 git pull
-bundle install
+git checkout master
+git pull
+bundle install --quiet
 bundle exec rake update
-git commit -am "Update by bot"
+git add -A
+git commit -m "Update by bot"
 git push
 bundle exec rake publish
 ```
@@ -42,5 +46,5 @@ $ crontab -e
 ```
 
 ```
-05 0,7,11 * * 1 /home/users/paavo/dev/update_lounasaika.sh
+5 0,7,10 * * 1 /home/users/paavo/dev/update_lounasaika.sh
 ```
