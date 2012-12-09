@@ -19,3 +19,28 @@ As a prerequisite, you'll need to have Ruby with RubyGems installed: ``curl -L h
 Navigate to project dir and install bundled gems: ``bundle``
 
 Run ``rake new_restaurant`` and follow instructions.
+
+### Updating using cron
+
+*~/dev/update_lounasaika.sh*
+```
+#!/bin/bash
+
+cd /home/users/paav-o/dev/lounasaika
+source /home/users/paav-o/.rvm/environments/default
+git pull
+bundle install
+bundle exec rake update
+git commit -am "Update by bot"
+git push
+bundle exec rake publish
+```
+
+```
+$ chmod +x update_lounasaika.sh
+$ crontab -e
+```
+
+```
+05 0,7,11 * * 1 /home/users/paavo/dev/update_lounasaika.sh
+```
