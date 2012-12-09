@@ -148,7 +148,15 @@
       });
     };
     renderDayLinks = function() {
-      return $.each(['today', 'tomorrow', 'day after'], function(i, dayName) {
+      var dayNames;
+      dayNames = ['today'];
+      if (window.day !== 0) {
+        dayNames.push('tomorrow');
+        if (window.day !== 6) {
+          dayNames.push('day after');
+        }
+      }
+      return $.each(dayNames, function(i, dayName) {
         return $('<a>', {
           text: dayName,
           id: window.day + i,

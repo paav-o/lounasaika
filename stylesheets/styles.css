@@ -187,6 +187,7 @@ margin: 5% auto;
 ul#restaurants {
 clear: both;
 padding: 0;
+width: 100%;
 }
 
 /* single restaurants */

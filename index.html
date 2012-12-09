@@ -148,7 +148,15 @@
       });
     };
     renderDayLinks = function() {
-      return $.each(['tänään', 'huomenna', 'ylihuomenna'], function(i, dayName) {
+      var dayNames;
+      dayNames = ['tänään'];
+      if (window.day !== 0) {
+        dayNames.push('huomenna');
+        if (window.day !== 6) {
+          dayNames.push('ylihuomenna');
+        }
+      }
+      return $.each(dayNames, function(i, dayName) {
         return $('<a>', {
           text: dayName,
           id: window.day + i,
