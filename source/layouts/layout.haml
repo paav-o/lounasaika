@@ -128,7 +128,13 @@
             ).appendTo '#campi'
 
         renderDayLinks = () ->
-          $.each ['#{I18n.t(:today)}', '#{I18n.t(:tomorrow)}', '#{I18n.t(:day_after)}'], (i, dayName) ->
+          dayNames = ['#{I18n.t(:today)}']
+          if window.day != 0
+            dayNames.push('#{I18n.t(:tomorrow)}')
+            if window.day != 6
+              dayNames.push('#{I18n.t(:day_after)}')
+
+          $.each dayNames, (i, dayName) ->
             $('<a>',
               text: dayName
               id: window.day+i
