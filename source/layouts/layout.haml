@@ -178,7 +178,7 @@
           renderCampusLinks(campi)
           reloadContent()
 
-        $.getJSON '/api/v1/announcements.json', (data) -> 
+        $.getJSON '/api/v1/#{I18n.locale}/announcements.json', (data) -> 
           random = Math.floor(Math.random() * data.length)
           $('#announcement p').html(data[random]['text'])
           $('#announcement p a').attr('href', data[random]['href'])

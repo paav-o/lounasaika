@@ -41,6 +41,7 @@ class Amica
 
     # Those few restaurants using a table, like Meccala
     if meals.first.last.length < 3
+      index = 0
       data.css(".ContentArea")[1].search('//tr/td/p').each do |row|
 
         row = row.text.strip
