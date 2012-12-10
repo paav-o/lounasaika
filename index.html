@@ -210,7 +210,7 @@
       renderCampusLinks(campi);
       return reloadContent();
     });
-    return $.getJSON('/api/v1/announcements.json', function(data) {
+    return $.getJSON('/api/v1/fi/announcements.json', function(data) {
       var random;
       random = Math.floor(Math.random() * data.length);
       $('#announcement p').html(data[random]['text']);
