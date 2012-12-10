@@ -67,8 +67,12 @@
     });
     $('#campi a').live('click', function(event) {
       window.campus = $(this).attr('id');
-      reloadContent();
-      $('#campi a').removeClass('active');
+      if (event.ctrlKey || event.metaKey) {
+        reloadContent(true);
+      } else {
+        reloadContent();
+        $('#campi a').removeClass('active');
+      }
       $(this).addClass('active');
       return $.cookie('campus', window.campus, {
         expires: 365,
@@ -132,7 +136,7 @@
         text: 'all restaurants',
         id: '',
         "class": (window.campus === void 0 ? 'active' : void 0),
-        title: 'Näytä kaikkien kampusten ravintolat',
+        title: 'Show all restaurants',
         href: '/',
         onclick: 'return false'
       }).appendTo('#campi');
@@ -141,7 +145,7 @@
           text: campus,
           id: campus,
           "class": (window.campus !== void 0 && campus === window.campus.capitalize() ? 'active' : void 0),
-          title: 'Näytä vain valitun kampuksen ravintolat',
+          title: 'Show single campus only. Use ctrl or cmd to select multiple.',
           href: '/',
           onclick: 'return false'
         }).appendTo('#campi');
@@ -167,8 +171,11 @@
         }).appendTo('#weekdays');
       });
     };
-    reloadContent = function() {
+    reloadContent = function(append) {
       var data, newPath, rootPath;
+      if (append == null) {
+        append = false;
+      }
       $('#day').html(weekdays['en'][window.day] + '');
       data = $('body').data('menuData');
       if (window.location.pathname.substring(0, 4) === '/en/') {
@@ -196,8 +203,12 @@
           return restaurant.mealsToday = restaurant.meals['en'][window.day - 1];
         }
       });
-      lounasaika.clear();
-      return lounasaika.render(data);
+      if (append) {
+        return lounasaika.append(data);
+      } else {
+        lounasaika.clear();
+        return lounasaika.render(data);
+      }
     };
     renderDayLinks();
     $.getJSON('/api/v1/en/menus.json', function(data) {
