@@ -69,7 +69,7 @@ task :update do
     %w(fi en).each do |locale|
       other_locale = %w(fi en).delete_if{|l| l.eql? locale}.first
       stripped_version = Marshal.load(Marshal.dump(restaurants.freeze))
-      stripped_version.each{|r| r["meals"] = r["meals"].tap { |hs| hs.delete(other_locale) }}
+      stripped_version.each{|r| r["meals"] = r["meals"].tap { |hs| hs.delete(other_locale) if hs.present? }}
       File.open(api_path+locale+"/menus.json", "w+") {|f| f.write(stripped_version.to_json) }
     end
 
