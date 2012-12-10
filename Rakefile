@@ -51,7 +51,7 @@ task :update do
         rescue
           puts colorize("Couldn't download menu for #{restaurant["name"]}!", 31)
         end
-        #begin
+        begin
           data = load_with_nokogiri(restaurant["url"]["fi"])
           scraper = to_module(restaurant["name"])
 
@@ -59,9 +59,9 @@ task :update do
           restaurant["meals"] = scraper.get_meals(data, meals)
 
           restaurant = add_translations(restaurant)
-        #rescue
-        #  puts colorize("Couldn't process meals for #{restaurant["name"]}!", 31)
-        #end
+        rescue
+          puts colorize("Couldn't process meals for #{restaurant["name"]}!", 31)
+        end
       end
       puts "#{restaurant["name"]} processed (#{time.round(2)})"
     end
