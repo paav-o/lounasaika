@@ -57,8 +57,11 @@
         # change campus
         $('#campi a').live 'click', (event) ->
           window.campus = $(this).attr('id')
-          reloadContent()
-          $('#campi a').removeClass 'active'
+          if (event.ctrlKey || event.metaKey)
+            reloadContent(true)
+          else
+            reloadContent()
+            $('#campi a').removeClass 'active'
           $(this).addClass 'active'
           $.cookie 'campus', window.campus,
             expires: 365
@@ -113,7 +116,7 @@
             text: '#{I18n.t(:all_restaurants)}'
             id: ''
             class: ('active' if window.campus == undefined)
-            title: 'Näytä kaikkien kampusten ravintolat'
+            title: '#{I18n.t(:show_all_restaurants)}'
             href: '/'
             onclick: 'return false'
           ).appendTo '#campi'
@@ -122,7 +125,7 @@
               text: campus
               id: campus
               class: ('active' if (window.campus != undefined and campus == window.campus.capitalize()))
-              title: 'Näytä vain valitun kampuksen ravintolat'
+              title: '#{I18n.t(:only_selected)}'
               href: '/'
               onclick: 'return false'
             ).appendTo '#campi'
@@ -144,7 +147,7 @@
               onclick: 'return false'
             ).appendTo '#weekdays'
 
-        reloadContent = () ->
+        reloadContent = (append=false) ->
           $('#day').html(weekdays['#{I18n.locale}'][window.day] + '#{I18n.t(:genitive_suffix)}')
           data = $('body').data('menuData')
           if window.location.pathname.substring(0, 4) == '/en/'
@@ -165,8 +168,11 @@
             restaurant.url_by_lang = (restaurant.url['#{I18n.locale}'] || restaurant.url['fi'])
             if (restaurant.meals)
               restaurant.mealsToday = restaurant.meals['#{I18n.locale}'][window.day-1]
-          lounasaika.clear()
-          lounasaika.render data
+          if (append)
+            lounasaika.append data
+          else
+            lounasaika.clear()
+            lounasaika.render data
 
         renderDayLinks()
 

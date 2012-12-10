@@ -20,6 +20,8 @@ fi:
   day_after: ylihuomenna
 
   all_restaurants: kaikki ravintolat
+  show_all_restaurants: Näytä kaikkien kampusten ravintolat
+  only_selected: Näytä vain valitun kampuksen ravintolat. Valitse useita painamalla ctrl tai cmd.
 
   closed: Kiinni
   open: Avoinna klo

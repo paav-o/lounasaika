@@ -20,6 +20,8 @@ en:
   day_after: day after
 
   all_restaurants: all restaurants
+  show_all_restaurants: Show all restaurants
+  only_selected: Show single campus only. Use ctrl or cmd to select multiple.
 
   closed: Closed
   open: Open until
