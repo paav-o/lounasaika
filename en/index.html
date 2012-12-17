@@ -199,7 +199,7 @@
         restaurant.closedCssClass = parseRestaurantStatus(restaurant.open)[1];
         restaurant.openingTimesDefList = parseRestaurantOpeningTimes(restaurant.open);
         restaurant.url_by_lang = restaurant.url['en'] || restaurant.url['fi'];
-        if (restaurant.meals) {
+        if (restaurant.meals && restaurant.meals['en']) {
           return restaurant.mealsToday = restaurant.meals['en'][window.day - 1];
         }
       });
