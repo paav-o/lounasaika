@@ -11,7 +11,7 @@
     %title= data.page.title || "Lounasaika.net"
     /= stylesheet_link_tag "normalize", "styles", "lounasaika_original"
     = stylesheet_link_tag "normalize", "styles", "lounasaika_original"
-    = javascript_include_tag "http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"
+    = javascript_include_tag "http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"
     = javascript_include_tag "jquery.cookie", "jquery.tipTip.minified", "moment.min", "tempo.min"
     :coffeescript
       $(document).ready ->
@@ -67,6 +67,7 @@
             expires: 365
             path: '/'
 
+        weekdays = []
         weekdays['fi'] = ['Sunnuntai', 'Maanantai', 'Tiistai', 'Keskiviiko', 'Torstai', 'Perjantai', 'Lauantai']
         weekdays['en'] = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday']
         weekdaysShort = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat']
