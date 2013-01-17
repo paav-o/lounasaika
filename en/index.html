@@ -13,7 +13,7 @@
     <link href="/stylesheets/normalize.css" media="screen" rel="stylesheet" type="text/css" />
     <link href="/stylesheets/styles.css" media="screen" rel="stylesheet" type="text/css" />
     <link href="/stylesheets/lounasaika_original.css" media="screen" rel="stylesheet" type="text/css" />
-    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js" type="text/javascript"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js" type="text/javascript"></script>
     <script src="/javascripts/jquery.cookie.js" type="text/javascript"></script>
     <script src="/javascripts/jquery.tipTip.minified.js" type="text/javascript"></script>
     <script src="/javascripts/moment.min.js" type="text/javascript"></script>
@@ -24,7 +24,7 @@
   var __indexOf = [].indexOf || function(item) { for (var i = 0, l = this.length; i < l; i++) { if (i in this && this[i] === item) return i; } return -1; };
 
   $(document).ready(function() {
-    var campusList, lounasaika, parseRestaurantOpeningTimes, parseRestaurantStatus, reloadContent, renderCampusLinks, renderDayLinks, time, weekdaysShort;
+    var campusList, lounasaika, parseRestaurantOpeningTimes, parseRestaurantStatus, reloadContent, renderCampusLinks, renderDayLinks, time, weekdays, weekdaysShort;
     $(function() {
       var tipTip;
       tipTip = function(selector, options) {
@@ -79,6 +79,7 @@
         path: '/'
       });
     });
+    weekdays = [];
     weekdays['fi'] = ['Sunnuntai', 'Maanantai', 'Tiistai', 'Keskiviiko', 'Torstai', 'Perjantai', 'Lauantai'];
     weekdays['en'] = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
     weekdaysShort = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'];
