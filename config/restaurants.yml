@@ -110,6 +110,9 @@
   url:
     fi: http://www.amica.fi/rafla
     en: http://www.amica.fi/en/rafla
+  location:
+    lat: 60.17090660
+    lng: 24.92364680
 
 - name: Chydenia
   address: Runeberginkatu 22, Helsinki
@@ -202,6 +205,9 @@
   open: Mon-Fri 10:30-13:30
   url:
     fi: http://www.compass-group.fi/ravintolat/Helsinki/ravintola-arabianranta/Lounaslista/
+  location:
+    lat: 60.20876250
+    lng: 24.97561010
 
 - name: Unicafe Chemicum
   address: A.I. Virtasen aukio 1, Helsinki
@@ -243,6 +249,9 @@
   url:
     fi: http://www.hyyravintolat.fi/rss/fin/2/
     en: http://www.hyyravintolat.fi/rss/eng/2/
+  location:
+   lat: 60.17510350
+   lng: 24.95338530
 
 - name: Unicafe Porthania
   address: Yliopistonkatu 3, Helsinki
@@ -251,6 +260,9 @@
   url:
     fi: http://www.hyyravintolat.fi/rss/fin/3/
     en: http://www.hyyravintolat.fi/rss/eng/3/
+  location:
+   lat: 60.16995360
+   lng: 24.94843540
 
 - name: Unicafe Päärakennus
   address: Fabianinkatu 33, Helsinki
@@ -259,6 +271,9 @@
   url:
     fi: http://www.hyyravintolat.fi/rss/fin/4/
     en: http://www.hyyravintolat.fi/rss/eng/4/
+  location:
+   lat: 60.16944179999999
+   lng: 24.94945750
 
 - name: Unicafe Rotunda
   address: Unioninkatu 36, Helsinki
@@ -267,6 +282,9 @@
   url:
     fi: http://www.hyyravintolat.fi/rss/fin/5/
     en: http://www.hyyravintolat.fi/rss/eng/5/
+  location:
+   lat: 60.1703510
+   lng: 24.95068510 
 
 - name: Unicafe Soc&Kom
   address: Yrjö-Koskisen katu 3, Helsinki
@@ -275,6 +293,9 @@
   url:
     fi: http://www.hyyravintolat.fi/rss/fin/15/
     en: http://www.hyyravintolat.fi/rss/eng/15/
+  location:
+   lat: 60.17308030
+   lng: 24.95251190
 
 - name: Unicafe Topelias
   address: Unioninkatu 38, Helsinki
@@ -283,6 +304,9 @@
   url:
     fi: http://www.hyyravintolat.fi/rss/fin/6/
     en: http://www.hyyravintolat.fi/rss/eng/6/
+  location:
+   lat: 60.17186450000001
+   lng: 24.95048410
 
 - name: Unicafe Valtiotiede
   address: Unioninkatu 37, Helsinki
