@@ -2,7 +2,7 @@
 - name: Teekkariravintolat
   address: Otakaari 24, Espoo
   campus: Otaniemi
-  open: Mon-Thu 10:30-16:00, Fri 10:30-15:00, Sat 11:30-15:00
+  open: Mon-Fri 10:30-15:00
   url:
     fi: http://www.sodexo.fi/dipoli
   location:
@@ -12,7 +12,7 @@
 - name: TUAS-talo
   address: Otaniementie 17, Espoo
   campus: Otaniemi
-  open: Mon-Thu 10:30-16:00, Fri 10:30-14:00
+  open: Mon-Fri 10:30-14:00
   url:
     fi: http://www.amica.fi/TUAS
     en: http://www.amica.fi/en/TUAS
@@ -23,7 +23,7 @@
 - name: Alvari
   address: Otakaari 2, Espoo
   campus: Otaniemi
-  open: Mon-Thu 10:30-17:00, Fri 10:30-15:00
+  open: Mon-Fri 10:30-14:00
   url:
     fi: http://www.amica.fi/alvari
     en: http://www.amica.fi/en/alvari
@@ -34,7 +34,7 @@
 - name: Elissa
   address: Otakaari 2, Espoo
   campus: Otaniemi
-  open: Mon-Thu 08:00-18:00, Fri 08:00-15:00
+  open: Mon-Fri 08:00-14:00
   url:
     fi: http://www.amica.fi/elissa
   location:
@@ -65,7 +65,7 @@
 - name: Kvarkki
   address: Otakaari 3, Espoo
   campus: Otaniemi
-  open: Mon-Thu 10:30-16:00, Fri 10:30-14:00
+  open: Mon-Fri 10:30-14:00
   url:
     fi: http://www.amica.fi/kvarkki
     en: http://www.amica.fi/en/kvarkki
@@ -76,7 +76,7 @@
 - name: Silinteri
   address: Otakaari 1 D, Espoo
   campus: Otaniemi
-  open: Mon-Fri 10:45-14:00
+  open: Mon-Fri 11:40-13:00
   url:
     fi: http://www.amica.fi/silinteri
   location:
