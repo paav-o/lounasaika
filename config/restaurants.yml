@@ -23,7 +23,7 @@
 - name: Alvari
   address: Otakaari 2, Espoo
   campus: Otaniemi
-  open: Mon-Fri 10:30-14:00
+  open: Mon-Thu 10:30-17:00, Fri 10:30-15:00
   url:
     fi: http://www.amica.fi/alvari
     en: http://www.amica.fi/en/alvari
@@ -65,7 +65,7 @@
 - name: Kvarkki
   address: Otakaari 3, Espoo
   campus: Otaniemi
-  open: Mon-Fri 10:30-14:00
+  open: Mon-Fri 10:30-15:00
   url:
     fi: http://www.amica.fi/kvarkki
     en: http://www.amica.fi/en/kvarkki
