@@ -1,3 +1,3 @@
-class Makelankoulu < Sodexo
+class MakelanKoulu < Sodexo
 
 end

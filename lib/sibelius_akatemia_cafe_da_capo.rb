@@ -1,0 +1,3 @@
+class SibeliusAkatemiaCafeDaCapo < Amica
+
+end

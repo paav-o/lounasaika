@@ -1,3 +1,3 @@
-class RavintolaSerpensYTHS < Unicafe
+class RavintolaSerpensYths < Unicafe
 
 end

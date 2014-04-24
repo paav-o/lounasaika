@@ -136,13 +136,13 @@
     lat: 60.1712571
     lng: 24.9243845
 
-- name: Sibelius-Akatemia / R-Talo
+- name: Sibelius-Akatemia / Café da Capo
   address: Pohjoinen Rautatiekatu 9, Helsinki
   campus: Töölö
   open: Mon-Thu 10:30-15:00, Fri 10:30-14:30
   url:
-    fi: http://www.amica.fi/r-talo
-    en: http://www.amica.fi/en/r-talo
+    fi: http://www.amica.fi/Ravintolat/Amica-ravintolat/Ravintolat-kaupungeittain/Helsinki/Sibelius-Akatemia-Cafe-da-Capo/
+    en: http://www.amica.fi/en/Ravintolat/Amica-restaurants/Areas/Helsinki/The-Sibelius-Academy--Cafe-da-Capo-/
   location:
     lat: 60.1715396
     lng: 24.9325754
@@ -330,16 +330,6 @@
     lat: 60.1693166
     lng: 24.9408102
 
-- name: Kasvisbaari
-  address: Kaikukatu 4 B, Helsinki
-  campus: Kallio
-  open: Mon-Fri 11:00-16:00
-  url:
-    fi: http://www.kasvisbaari.fi/menu.php
-  location:
-    lat: 60.1830135
-    lng: 24.9591233
-
 - name: Unicafe Kookos
   address: Haapaniemenkatu 6, Helsinki
   campus: Kallio
@@ -410,7 +400,6 @@
   campus: Kallio / Vallila
   open:
   url:
-    en:
     fi: http://www.amica.fi/Ravintolat/Amica-ravintolat/Ravintolat-kaupungeittain/Helsinki/Arcada--Nylands-svenska-yrkeshogskola1/
   location:
     lat:
@@ -421,7 +410,6 @@
   campus: Kallio / Vallila
   open:
   url:
-    en:
     fi: http://www.amica.fi/Ravintolat/Amica-ravintolat/Ravintolat-kaupungeittain/Helsinki/Diakonia-Ammattikorkeakoulu/
   location:
     lat:
@@ -432,7 +420,6 @@
   campus: Pasila
   open:
   url:
-    en:
     fi: http://www.amica.fi/Ravintolat/Amica-ravintolat/Ravintolat-kaupungeittain/Helsinki/Opetustalo--Helia-Bistro/
   location:
     lat:
@@ -443,7 +430,6 @@
   campus: Kallio / Vallila
   open:
   url:
-    en:
     fi: http://www.amica.fi/Ravintolat/Amica-ravintolat/Ravintolat-kaupungeittain/Helsinki/Helsingin-Diakonissalaitos--Alppica/
   location:
     lat:
@@ -454,7 +440,6 @@
   campus: Töölö
   open:
   url:
-    en:
     fi: http://www.amica.fi/Ravintolat/Amica-ravintolat/Ravintolat-kaupungeittain/Helsinki/Helsingin-yliopisto-Elainlaaketieteen-laitos--Tahka/
   location:
     lat:
@@ -465,7 +450,6 @@
   campus: Pasila
   open:
   url:
-    en:
     fi: http://www.amica.fi/Ravintolat/Amica-ravintolat/Ravintolat-kaupungeittain/Helsinki/Opetustalo--Paaraide--/
   location:
     lat:
@@ -476,29 +460,26 @@
   campus: Arabia
   open:
   url:
-    en:
     fi: http://www.amica.fi/Ravintolat/Amica-ravintolat/Ravintolat-kaupungeittain/Helsinki/Pop-Jazz-Konservatorio--Jamipaja/
   location:
     lat:
     lng:
 
-- name: TeaK
+- name: Teak
   address:
   campus: Kallio / Vallila
   open:
   url:
-    en:
     fi: http://www.amica.fi/Ravintolat/Amica-ravintolat/Ravintolat-kaupungeittain/Helsinki/TEAK/
   location:
     lat:
     lng:
 
-- name: Mäkelän koulu
+- name: Mäkelän Koulu
   address:
   campus: Kallio / Vallila
   open:
   url:
-    en:
     fi: http://www.sodexo.fi/hbc
   location:
     lat:
@@ -509,7 +490,7 @@
   campus: Meilahti
   open:
   url:
-    en:
+    en: http://www.hyyravintolat.fi/en/unicafe#/Meilahti/Meilahti/4/13
     fi: http://www.hyyravintolat.fi/unicafe#/Meilahti/Meilahti/4/13
   location:
     lat:
@@ -520,18 +501,18 @@
   campus: Ruskeasuo
   open:
   url:
-    en:
+    en: http://www.hyyravintolat.fi/en/unicafe#/Ruskeasuo/Ruskeasuo/8/14
     fi: http://www.hyyravintolat.fi/unicafe#/Ruskeasuo/Ruskeasuo/8/14
   location:
     lat:
     lng:
 
-- name: Ravintola Serpens (YTHS)
+- name: Ravintola Serpens Yths
   address:
   campus: Töölö
   open:
   url:
-    en:
+    en: http://www.hyyravintolat.fi/en/unicafe#/YTHS/Ravintola Serpens/10/42
     fi: http://www.hyyravintolat.fi/unicafe#/YTHS/Ravintola Serpens/10/42
   location:
     lat:
@@ -542,7 +523,7 @@
   campus: Keskusta
   open:
   url:
-    en:
+    en: http://www.hyyravintolat.fi/en/unicafe#/Metropolia/Bulevardi/9/28
     fi: http://www.hyyravintolat.fi/unicafe#/Metropolia/Bulevardi/9/28
   location:
     lat:
@@ -553,8 +534,8 @@
   campus: Kallio / Vallila
   open:
   url:
-    en:
-    fi: http://www.hyyravintolat.fi/unicafe#/Metropolia/Hämeentie/9/33
+    en: http://www.hyyravintolat.fi/en/unicafe#/Metropolia/Hameentie/9/33
+    fi: http://www.hyyravintolat.fi/unicafe#/Metropolia/Hameentie/9/33
   location:
     lat:
     lng:
@@ -564,7 +545,7 @@
   campus: Kumpula
   open:
   url:
-    en:
+    en: http://www.hyyravintolat.fi/en/unicafe#/Metropolia/Sofianlehto/9/34
     fi: http://www.hyyravintolat.fi/unicafe#/Metropolia/Sofianlehto/9/34
   location:
     lat:
@@ -575,7 +556,7 @@
   campus: Meilahti
   open:
   url:
-    en:
+    en: http://www.hyyravintolat.fi/en/unicafe#/Metropolia/Tukholmankatu/9/31
     fi: http://www.hyyravintolat.fi/unicafe#/Metropolia/Tukholmankatu/9/31
   location:
     lat:
