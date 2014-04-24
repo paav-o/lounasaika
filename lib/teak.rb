@@ -1,0 +1,3 @@
+class TeaK < Amica
+
+end

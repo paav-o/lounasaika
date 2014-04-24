@@ -1,0 +1,3 @@
+class Diakonia < Amica
+
+end

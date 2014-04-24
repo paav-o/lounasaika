@@ -1,0 +1,3 @@
+class HeliaBistro < Amica
+
+end

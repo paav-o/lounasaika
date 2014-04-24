@@ -1,0 +1,3 @@
+class Alppica < Amica
+
+end

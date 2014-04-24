@@ -1,0 +1,3 @@
+class MetropoliaSofianlehto < Unicafe
+
+end

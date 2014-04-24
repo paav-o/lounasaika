@@ -1,0 +1,3 @@
+class Arcada < Amica
+
+end

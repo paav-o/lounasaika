@@ -1,0 +1,3 @@
+class MetropoliaHameentie < Unicafe
+
+end

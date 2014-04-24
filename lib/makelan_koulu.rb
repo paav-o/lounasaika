@@ -1,0 +1,3 @@
+class Makelankoulu < Sodexo
+
+end

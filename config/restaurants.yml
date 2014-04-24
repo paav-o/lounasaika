@@ -403,3 +403,180 @@
   location:
     lat: 60.2290679
     lng: 25.0185889
+
+####### Lisätyt 24.4.2014
+- name: Arcada
+  address:
+  campus: Kallio / Vallila
+  open:
+  url:
+    en:
+    fi: http://www.amica.fi/Ravintolat/Amica-ravintolat/Ravintolat-kaupungeittain/Helsinki/Arcada--Nylands-svenska-yrkeshogskola1/
+  location:
+    lat:
+    lng:
+
+- name: Diakonia
+  address:
+  campus: Kallio / Vallila
+  open:
+  url:
+    en:
+    fi: http://www.amica.fi/Ravintolat/Amica-ravintolat/Ravintolat-kaupungeittain/Helsinki/Diakonia-Ammattikorkeakoulu/
+  location:
+    lat:
+    lng:
+
+- name: Helia-Bistro
+  address:
+  campus: Pasila
+  open:
+  url:
+    en:
+    fi: http://www.amica.fi/Ravintolat/Amica-ravintolat/Ravintolat-kaupungeittain/Helsinki/Opetustalo--Helia-Bistro/
+  location:
+    lat:
+    lng:
+
+- name: Alppica
+  address:
+  campus: Kallio / Vallila
+  open:
+  url:
+    en:
+    fi: http://www.amica.fi/Ravintolat/Amica-ravintolat/Ravintolat-kaupungeittain/Helsinki/Helsingin-Diakonissalaitos--Alppica/
+  location:
+    lat:
+    lng:
+
+- name: Tähkä
+  address:
+  campus: Töölö
+  open:
+  url:
+    en:
+    fi: http://www.amica.fi/Ravintolat/Amica-ravintolat/Ravintolat-kaupungeittain/Helsinki/Helsingin-yliopisto-Elainlaaketieteen-laitos--Tahka/
+  location:
+    lat:
+    lng:
+
+- name: Pääraide Opetustalo
+  address:
+  campus: Pasila
+  open:
+  url:
+    en:
+    fi: http://www.amica.fi/Ravintolat/Amica-ravintolat/Ravintolat-kaupungeittain/Helsinki/Opetustalo--Paaraide--/
+  location:
+    lat:
+    lng:
+
+- name: Jamipaja
+  address:
+  campus: Arabia
+  open:
+  url:
+    en:
+    fi: http://www.amica.fi/Ravintolat/Amica-ravintolat/Ravintolat-kaupungeittain/Helsinki/Pop-Jazz-Konservatorio--Jamipaja/
+  location:
+    lat:
+    lng:
+
+- name: TeaK
+  address:
+  campus: Kallio / Vallila
+  open:
+  url:
+    en:
+    fi: http://www.amica.fi/Ravintolat/Amica-ravintolat/Ravintolat-kaupungeittain/Helsinki/TEAK/
+  location:
+    lat:
+    lng:
+
+- name: Mäkelän koulu
+  address:
+  campus: Kallio / Vallila
+  open:
+  url:
+    en:
+    fi: http://www.sodexo.fi/hbc
+  location:
+    lat:
+    lng:
+
+- name: Unicafe Meilahti
+  address:
+  campus: Meilahti
+  open:
+  url:
+    en:
+    fi: http://www.hyyravintolat.fi/unicafe#/Meilahti/Meilahti/4/13
+  location:
+    lat:
+    lng:
+
+- name: Unicafe Ruskeasuo
+  address:
+  campus: Ruskeasuo
+  open:
+  url:
+    en:
+    fi: http://www.hyyravintolat.fi/unicafe#/Ruskeasuo/Ruskeasuo/8/14
+  location:
+    lat:
+    lng:
+
+- name: Ravintola Serpens (YTHS)
+  address:
+  campus: Töölö
+  open:
+  url:
+    en:
+    fi: http://www.hyyravintolat.fi/unicafe#/YTHS/Ravintola Serpens/10/42
+  location:
+    lat:
+    lng:
+
+- name: Metropolia Bulevardi
+  address:
+  campus: Keskusta
+  open:
+  url:
+    en:
+    fi: http://www.hyyravintolat.fi/unicafe#/Metropolia/Bulevardi/9/28
+  location:
+    lat:
+    lng:
+
+- name: Metropolia Hämeentie
+  address:
+  campus: Kallio / Vallila
+  open:
+  url:
+    en:
+    fi: http://www.hyyravintolat.fi/unicafe#/Metropolia/Hämeentie/9/33
+  location:
+    lat:
+    lng:
+
+- name: Metropolia Sofianlehto
+  address:
+  campus: Kumpula
+  open:
+  url:
+    en:
+    fi: http://www.hyyravintolat.fi/unicafe#/Metropolia/Sofianlehto/9/34
+  location:
+    lat:
+    lng:
+
+- name: Metropolia Tukholmankatu
+  address:
+  campus: Meilahti
+  open:
+  url:
+    en:
+    fi: http://www.hyyravintolat.fi/unicafe#/Metropolia/Tukholmankatu/9/31
+  location:
+    lat:
+    lng:
