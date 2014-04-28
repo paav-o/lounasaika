@@ -332,7 +332,7 @@
 
 - name: Unicafe Kookos
   address: Haapaniemenkatu 6, Helsinki
-  campus: Kallio
+  campus: Kallio / Vallila
   open: Mon-Thu 11:00-17:00, Fri 11:00-15:00
   url:
     fi: http://www.hyyravintolat.fi/rss/fin/16/
@@ -435,16 +435,6 @@
     lat:
     lng:
 
-- name: Tähkä
-  address:
-  campus: Töölö
-  open: Mon-Fri 10:30-13:00
-  url:
-    fi: http://www.amica.fi/Ravintolat/Amica-ravintolat/Ravintolat-kaupungeittain/Helsinki/Helsingin-yliopisto-Elainlaaketieteen-laitos--Tahka/
-  location:
-    lat:
-    lng:
-
 - name: Pääraide Opetustalo
   address:
   campus: Pasila
@@ -510,7 +500,7 @@
 - name: Ravintola Serpens Yths
   address:
   campus: Töölö
-  open:  Mon-Fri 10:30-19:00
+  open: Mon-Fri 10:30-19:00
   url:
     en: http://www.hyyravintolat.fi/en/unicafe#/YTHS/Ravintola20%Serpens/10/42
     fi: http://www.hyyravintolat.fi/unicafe#/YTHS/Ravintola%20Serpens/10/42
@@ -532,7 +522,7 @@
 - name: Metropolia Hämeentie
   address:
   campus: Kallio / Vallila
-  open:  Mon-Fri 10:30-14:30
+  open: Mon-Fri 10:30-14:30
   url:
     en: http://www.hyyravintolat.fi/en/unicafe#/Metropolia/Hameentie/9/33
     fi: http://www.hyyravintolat.fi/unicafe#/Metropolia/Hameentie/9/33
@@ -543,7 +533,7 @@
 - name: Metropolia Sofianlehto
   address:
   campus: Kumpula
-  open:  Mon-Fri 10:30-15:30
+  open: Mon-Fri 10:30-15:30
   url:
     en: http://www.hyyravintolat.fi/en/unicafe#/Metropolia/Sofianlehto/9/34
     fi: http://www.hyyravintolat.fi/unicafe#/Metropolia/Sofianlehto/9/34
@@ -554,7 +544,7 @@
 - name: Metropolia Tukholmankatu
   address:
   campus: Meilahti
-  open:  Mon-Thu 10:30-14:30, Fri 10:30-14:00
+  open: Mon-Thu 10:30-14:30, Fri 10:30-14:00
   url:
     en: http://www.hyyravintolat.fi/en/unicafe#/Metropolia/Tukholmankatu/9/31
     fi: http://www.hyyravintolat.fi/unicafe#/Metropolia/Tukholmankatu/9/31
