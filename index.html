@@ -203,7 +203,7 @@
         if (!!restaurant.meals && !!restaurant.meals['fi'] && !!restaurant.meals['fi'][window.day - 1]) {
           return restaurant.mealsToday = restaurant.meals['fi'][window.day - 1];
         } else {
-          return restaurant.splice(i, 1);
+          return data.splice(i, 1);
         }
       });
       if (append) {
