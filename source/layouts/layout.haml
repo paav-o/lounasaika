@@ -170,7 +170,7 @@
             if (!!restaurant.meals && !!restaurant.meals['#{I18n.locale}'] && !!restaurant.meals['#{I18n.locale}'][window.day-1])
               restaurant.mealsToday = restaurant.meals['#{I18n.locale}'][window.day-1]
             else
-              restaurant.splice(i, 1)
+              data.splice(i, 1)
           if (append)
             lounasaika.append data
           else
