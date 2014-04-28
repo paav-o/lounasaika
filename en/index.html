@@ -200,8 +200,10 @@
         restaurant.closedCssClass = parseRestaurantStatus(restaurant.open)[1];
         restaurant.openingTimesDefList = parseRestaurantOpeningTimes(restaurant.open);
         restaurant.url_by_lang = restaurant.url['en'] || restaurant.url['fi'];
-        if (restaurant.meals && restaurant.meals['en']) {
+        if (!!restaurant.meals && !!restaurant.meals['en'] && !!restaurant.meals['en'][window.day - 1]) {
           return restaurant.mealsToday = restaurant.meals['en'][window.day - 1];
+        } else {
+          return restaurant.splice(i, 1);
         }
       });
       if (append) {
