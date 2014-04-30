@@ -480,8 +480,8 @@
   campus: Meilahti
   open: Mon-Thu 10:30-14:30, Fri 10:30-14:00
   url:
-    en: http://www.hyyravintolat.fi/en/unicafe#/Meilahti/Meilahti/4/13
-    fi: http://www.hyyravintolat.fi/unicafe#/Meilahti/Meilahti/4/13
+    en: http://www.hyyravintolat.fi/rss/eng/13/
+    fi: http://www.hyyravintolat.fi/rss/fi/13/
   location:
     lat:
     lng:
@@ -491,8 +491,8 @@
   campus: Ruskeasuo
   open: Mon-Thu 10:30-14:30, Fri 10:30-14:00
   url:
-    en: http://www.hyyravintolat.fi/en/unicafe#/Ruskeasuo/Ruskeasuo/8/14
-    fi: http://www.hyyravintolat.fi/unicafe#/Ruskeasuo/Ruskeasuo/8/14
+    en: http://www.hyyravintolat.fi/rss/eng/14/
+    fi: http://www.hyyravintolat.fi/rss/fi/14/
   location:
     lat:
     lng:
@@ -502,8 +502,8 @@
   campus: Töölö
   open: Mon-Fri 10:30-19:00
   url:
-    en: http://www.hyyravintolat.fi/en/unicafe#/YTHS/Ravintola20%Serpens/10/42
-    fi: http://www.hyyravintolat.fi/unicafe#/YTHS/Ravintola%20Serpens/10/42
+    en: http://www.hyyravintolat.fi/rss/eng/42/
+    fi: http://www.hyyravintolat.fi/rss/fi/42/
   location:
     lat:
     lng:
@@ -513,8 +513,8 @@
   campus: Keskusta
   open: Mon-Fri 10:30-14:30
   url:
-    en: http://www.hyyravintolat.fi/en/unicafe#/Metropolia/Bulevardi/9/28
-    fi: http://www.hyyravintolat.fi/unicafe#/Metropolia/Bulevardi/9/28
+    en: http://www.hyyravintolat.fi/rss/eng/28/
+    fi: http://www.hyyravintolat.fi/rss/fi/28/
   location:
     lat:
     lng:
@@ -524,8 +524,8 @@
   campus: Kallio / Vallila
   open: Mon-Fri 10:30-14:30
   url:
-    en: http://www.hyyravintolat.fi/en/unicafe#/Metropolia/Hameentie/9/33
-    fi: http://www.hyyravintolat.fi/unicafe#/Metropolia/Hameentie/9/33
+    en: http://www.hyyravintolat.fi/rss/eng/33/
+    fi: http://www.hyyravintolat.fi/rss/fi/33/
   location:
     lat:
     lng:
@@ -535,8 +535,8 @@
   campus: Kumpula
   open: Mon-Fri 10:30-15:30
   url:
-    en: http://www.hyyravintolat.fi/en/unicafe#/Metropolia/Sofianlehto/9/34
-    fi: http://www.hyyravintolat.fi/unicafe#/Metropolia/Sofianlehto/9/34
+    en: http://www.hyyravintolat.fi/rss/eng/34/
+    fi: http://www.hyyravintolat.fi/rss/fi/34/
   location:
     lat:
     lng:
@@ -546,8 +546,8 @@
   campus: Meilahti
   open: Mon-Thu 10:30-14:30, Fri 10:30-14:00
   url:
-    en: http://www.hyyravintolat.fi/en/unicafe#/Metropolia/Tukholmankatu/9/31
-    fi: http://www.hyyravintolat.fi/unicafe#/Metropolia/Tukholmankatu/9/31
+    en: http://www.hyyravintolat.fi/rss/eng/31/
+    fi: http://www.hyyravintolat.fi/rss/fi/31/
   location:
     lat:
     lng:
