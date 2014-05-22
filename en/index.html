@@ -212,7 +212,7 @@
       }
     };
     renderDayLinks();
-    $.getJSON('/api/v1/en/menus.json', function(data) {
+    return $.getJSON('/api/v1/en/menus.json', function(data) {
       var campi, _ref;
       campi = campusList(data);
       if ($.cookie('campus') && (_ref = $.cookie('campus'), __indexOf.call(campi, _ref) >= 0)) {
@@ -221,13 +221,6 @@
       $('body').data('menuData', data);
       renderCampusLinks(campi);
       return reloadContent();
-    });
-    return $.getJSON('/api/v1/en/announcements.json', function(data) {
-      var random;
-      random = Math.floor(Math.random() * data.length);
-      $('#announcement p').html(data[random]['text']);
-      $('#announcement p a').attr('href', data[random]['href']);
-      return $('#announcement p a').attr('onClick', "recordOutboundLink(this, 'Outbound Links', '" + data[random]['id'] + "'); return false;");
     });
   });
 
