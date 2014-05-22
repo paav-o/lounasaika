@@ -194,19 +194,19 @@ def add_translations(restaurant)
       meals_en = to_module(restaurant["name"]).get_meals(data, {"en" => []})
       restaurant["meals"].merge! meals_en
     else
-      puts "Translating #{restaurant['name']}, this may take a while ..."
-      restaurant["meals"]["fi"].each_with_index do |day,index|
-        restaurant["meals"]["en"][index] = []
-        if day.present?
-          day.each do |meal|
-            begin
-              restaurant["meals"]["en"][index] << translator.translate(meal, :from => "fi", :to => "en")
-            rescue
-              puts colorize("Translation using Bing API failed! Have you updated config/credentials.yml?", 31)
-            end
-          end
-        end
-      end
+      # puts "Translating #{restaurant['name']}, this may take a while ..."
+      # restaurant["meals"]["fi"].each_with_index do |day,index|
+        # restaurant["meals"]["en"][index] = []
+        # if day.present?
+          # day.each do |meal|
+            # begin
+              # restaurant["meals"]["en"][index] << translator.translate(meal, :from => "fi", :to => "en")
+            # rescue
+              # puts colorize("Translation using Bing API failed! Have you updated config/credentials.yml?", 31)
+            # end
+          # end
+        # end
+      # end
     end
   end
   return restaurant
