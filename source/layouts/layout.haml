@@ -185,10 +185,5 @@
           renderCampusLinks(campi)
           reloadContent()
 
-        $.getJSON '/api/v1/#{I18n.locale}/announcements.json', (data) -> 
-          random = Math.floor(Math.random() * data.length)
-          $('#announcement p').html(data[random]['text'])
-          $('#announcement p a').attr('href', data[random]['href'])
-          $('#announcement p a').attr('onClick', "recordOutboundLink(this, 'Outbound Links', '"+data[random]['id']+"'); return false;")
   %body{:class => page_classes}
     = yield
