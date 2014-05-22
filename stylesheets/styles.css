@@ -3,13 +3,12 @@
 /* announcement css */
 
 #announcement {
-height: 22px;
+height: 0;
 width: 100%;
 color: #555;
 margin-top: 0;
 background: #fffdd0;
-border: 1px solid #b0b0aa;
-border-top: 0;
+border: none;
 border-radius: 3px;
 -moz-border-radius: 3px;
 -webkit-border-radius: 3px;
