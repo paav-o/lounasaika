@@ -48,7 +48,7 @@ task :update do
           data = {}
           data["fi"] = load_with_nokogiri(restaurant["url"]["fi"])
           data["en"] = load_with_nokogiri(restaurant["url"]["en"]) if restaurant["url"]["en"].present?
-        rescue
+        rescue Exception => e
           puts colorize("Couldn't download menu for #{restaurant["name"]}!", 31)
         end
         begin
@@ -59,7 +59,7 @@ task :update do
           restaurant["meals"] = scraper.get_meals(data, meals)
 
           restaurant = add_translations(restaurant)
-        rescue
+        rescue Exception => e
           puts colorize("Couldn't process meals for #{restaurant["name"]}!", 31)
         end
       end
