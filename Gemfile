@@ -10,4 +10,6 @@ gem "middleman-favicon-maker"
 gem "haml"
 gem "sass"
 gem "coffee-filter"
-gem "therubyracer"
+#gem "therubyracer"
+
+gem 'therubyracer', '0.12.0'

@@ -219,6 +219,9 @@ def load_with_nokogiri(url)
     pagename = url.match(/facebook.com\/(.*)/)[1]
     url = "https://graph.facebook.com/#{pagename}/posts?limit=5&access_token=#{CREDENTIALS['facebook']['access_token']}"
     data = JSON.parse(open(url).read)
+  elsif url =~ /amica\.fi/
+    url = url + Time.new().strftime("%Y-%m-%d")
+    data = JSON.parse(open(url).read)
   else
     Nokogiri::HTML(open(url))
   end
