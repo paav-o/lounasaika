@@ -48,7 +48,7 @@ task :update do
           data = {}
           data["fi"] = load_with_nokogiri(restaurant["url"]["fi"])
           data["en"] = load_with_nokogiri(restaurant["url"]["en"]) if restaurant["url"]["en"].present?
-        rescue
+        rescue Exception => e
           puts colorize("Couldn't download menu for #{restaurant["name"]}!", 31)
         end
         begin
@@ -59,7 +59,7 @@ task :update do
           restaurant["meals"] = scraper.get_meals(data, meals)
 
           restaurant = add_translations(restaurant)
-        rescue
+        rescue Exception => e
           puts colorize("Couldn't process meals for #{restaurant["name"]}!", 31)
         end
       end
@@ -194,19 +194,19 @@ def add_translations(restaurant)
       meals_en = to_module(restaurant["name"]).get_meals(data, {"en" => []})
       restaurant["meals"].merge! meals_en
     else
-      # puts "Translating #{restaurant['name']}, this may take a while ..."
-      # restaurant["meals"]["fi"].each_with_index do |day,index|
-        # restaurant["meals"]["en"][index] = []
-        # if day.present?
-          # day.each do |meal|
-            # begin
-              # restaurant["meals"]["en"][index] << translator.translate(meal, :from => "fi", :to => "en")
-            # rescue
-              # puts colorize("Translation using Bing API failed! Have you updated config/credentials.yml?", 31)
-            # end
-          # end
-        # end
-      # end
+      puts "Translating #{restaurant['name']}, this may take a while ..."
+      restaurant["meals"]["fi"].each_with_index do |day,index|
+        restaurant["meals"]["en"][index] = []
+        if day.present?
+          day.each do |meal|
+            begin
+              restaurant["meals"]["en"][index] << translator.translate(meal, :from => "fi", :to => "en")
+            rescue
+              puts colorize("Translation using Bing API failed! Have you updated config/credentials.yml?", 31)
+            end
+          end
+        end
+      end
     end
   end
   return restaurant
