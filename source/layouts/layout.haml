@@ -167,7 +167,7 @@
             restaurant.closedCssClass = parseRestaurantStatus(restaurant.open)[1]
             restaurant.openingTimesDefList = parseRestaurantOpeningTimes(restaurant.open)
             restaurant.url_by_lang = (restaurant.url['#{I18n.locale}'] || restaurant.url['fi'])
-            if (restaurant.meals && restaurant.meals['#{I18n.locale}'])
+            if (!!restaurant.meals && !!restaurant.meals['#{I18n.locale}'] && !!restaurant.meals['#{I18n.locale}'][window.day-1])
               restaurant.mealsToday = restaurant.meals['#{I18n.locale}'][window.day-1]
           if (append)
             lounasaika.append data
@@ -185,10 +185,5 @@
           renderCampusLinks(campi)
           reloadContent()
 
-        $.getJSON '/api/v1/#{I18n.locale}/announcements.json', (data) -> 
-          random = Math.floor(Math.random() * data.length)
-          $('#announcement p').html(data[random]['text'])
-          $('#announcement p a').attr('href', data[random]['href'])
-          $('#announcement p a').attr('onClick', "recordOutboundLink(this, 'Outbound Links', '"+data[random]['id']+"'); return false;")
   %body{:class => page_classes}
     = yield
