@@ -50,6 +50,8 @@ task :update do
           data["en"] = load_with_nokogiri(restaurant["url"]["en"]) if restaurant["url"]["en"].present?
         rescue Exception => e
           puts colorize("Couldn't download menu for #{restaurant["name"]}!", 31)
+          puts e.message
+          # puts e.backtrace.join("\n")
         end
         begin
           data = load_with_nokogiri(restaurant["url"]["fi"])
@@ -61,6 +63,8 @@ task :update do
           restaurant = add_translations(restaurant)
         rescue Exception => e
           puts colorize("Couldn't process meals for #{restaurant["name"]}!", 31)
+          puts e.message
+          # puts e.backtrace.join("\n")
         end
       end
       puts "#{restaurant["name"]} processed (#{time.round(2)})"
