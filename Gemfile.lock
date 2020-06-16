@@ -26,7 +26,9 @@ GEM
       mini_magick (~> 3.0)
     ffi (1.2.0)
     fssm (0.2.9)
-    haml (3.1.7)
+    haml (5.0.0)
+      temple (>= 0.8.0)
+      tilt
     hashery (2.1.0)
     hike (1.2.1)
     http_router (0.10.2)
@@ -116,6 +118,7 @@ GEM
       tilt (~> 1.1)
     subexec (0.2.2)
     syntax (1.0.0)
+    temple (0.8.2)
     therubyracer (0.12.0)
       libv8 (~> 3.16.14.0)
       ref
