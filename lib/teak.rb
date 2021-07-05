@@ -1,3 +1,0 @@
-class Teak < Amica
-
-end

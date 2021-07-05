@@ -1,3 +1,0 @@
-class RavintolaSerpensYths < Unicafe
-
-end

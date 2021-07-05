@@ -1,3 +1,0 @@
-class UnicafeOlivia < Unicafe
-
-end

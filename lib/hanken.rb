@@ -1,3 +1,0 @@
-class Hanken < Amica
-
-end

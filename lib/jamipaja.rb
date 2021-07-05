@@ -1,3 +1,0 @@
-class Jamipaja < Amica
-
-end

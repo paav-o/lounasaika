@@ -1,3 +1,0 @@
-class LaureaOtaniemi < Amica
-
-end

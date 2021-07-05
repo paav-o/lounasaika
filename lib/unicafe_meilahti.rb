@@ -1,3 +1,0 @@
-class UnicafeMeilahti < Unicafe
-
-end

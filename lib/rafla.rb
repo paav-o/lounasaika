@@ -1,3 +1,0 @@
-class Rafla < Amica
-
-end

@@ -1,3 +1,0 @@
-class Elissa < Amica
-
-end

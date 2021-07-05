@@ -1,3 +1,0 @@
-class MetropoliaTukholmankatu < Unicafe
-
-end

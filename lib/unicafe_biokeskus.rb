@@ -1,3 +1,0 @@
-class UnicafeBiokeskus < Unicafe
-
-end

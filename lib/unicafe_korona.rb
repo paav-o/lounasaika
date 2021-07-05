@@ -1,3 +1,0 @@
-class UnicafeKorona < Unicafe
-
-end
